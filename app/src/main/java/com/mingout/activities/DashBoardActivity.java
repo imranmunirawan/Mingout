@@ -131,7 +131,7 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 		IV_logo = (ImageView) findViewById(R.id.IV_logo);
 
 		//navigationView = (NavigationView) findViewById(R.id.NV_container);
-		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+		mDrawerLayout = (DrawerLayout) findViewById(drawerLayout);
 		IV_menu.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -139,7 +139,7 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 			}
 		});
 
-	    mDrawerLayout.addDrawerListener(mDrawerToggle);
+	    mDrawerLayout.setDrawerListener(mDrawerToggle);
 
 		// This should be called before `syncState()` on your toggle
 		//	mDrawerLayout.closeDrawer(navigationView);
