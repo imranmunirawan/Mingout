@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:weightSum="2" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary" >
+
+        <TextView
+            android:id="@+id/TV_more"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/b_more"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/TV_userStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="2dp"
+            android:text="Online"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/TV_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/TV_more"
+            android:layout_alignBottom="@+id/TV_more"
+            android:layout_centerHorizontal="true"
+            android:text="Adnan Khan"
+            android:textColor="#fff"
+            android:textSize="22dp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_weight="2"
+        android:divider="#fff"
+        android:dividerHeight="15dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:scrollbars="none" >
+    </ListView>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#ff8a0e" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000" >
+
+        <EditText
+            android:id="@+id/ET_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@+id/B_send"
+            android:background="@drawable/round_simple_shape"
+            android:ems="10"
+            android:hint="Type Here..."
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:minLines="1"
+            android:paddingBottom="5dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:textSize="14dp" >
+        </EditText>
+
+        <Button
+            android:id="@+id/B_send"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/b_chat_send"
+            android:text="" />
+    </RelativeLayout>
+
+</LinearLayout>

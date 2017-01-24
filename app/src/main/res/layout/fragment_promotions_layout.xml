@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/IV_lowerBanner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/IV_upperBanner"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="@drawable/promotions_web_shape">
+
+        <WebView
+            android:id="@+id/WV_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="6dp"
+            android:gravity="center"
+            android:scrollbars="none"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/IV_lowerBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@mipmap/test_bottom_banner" />
+
+    <LinearLayout
+        android:id="@+id/LL_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/relativeLayout1"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/promotions_skip_message"
+            android:textSize="14dp"
+            android:textColor="#eeeeee"/>
+
+        <TextView
+            android:id="@+id/TV_RemainingTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="10"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="#eeeeee"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/IV_upperBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/LL_timer"
+        android:background="@mipmap/test_top_banner" />
+
+</RelativeLayout>

@@ -1,0 +1,344 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:id="@+id/RR_myPhrase"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_margin="10dp" >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.6"
+                android:src="@drawable/icon_proview_phrase"
+                android:id="@+id/IV_phraseSide"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:text="@string/my_phrase"
+                android:textSize="16dp"
+                android:textColor="#474747"
+                />
+
+            <TextView
+                android:id="@+id/TV_myPhrase"
+                android:layout_width="0dp"
+                android:layout_weight="2.2"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:lines="1"
+                android:textSize="14dp"
+                android:fontFamily="sans-serif-light"
+                />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/edit_profile_arrow_white"/>
+
+        </LinearLayout>
+
+         <LinearLayout
+             android:orientation="horizontal"
+             android:weightSum="4"
+            android:id="@+id/RR_sex"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="left|center"
+            android:layout_margin="10dp" >
+             <ImageView
+                 android:layout_width="0dp"
+                 android:layout_height="40dp"
+                 android:layout_weight="0.6"
+                 android:src="@drawable/icon_proview_gender"
+                 android:id="@+id/IV_genderSide"
+                 android:layout_centerVertical="true"
+                 android:layout_alignParentStart="true"
+                 />
+
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:text="@string/gender"
+                 android:textSize="16dp"
+                 android:textColor="#474747"
+                 android:layout_centerVertical="true"
+                 android:layout_toEndOf="@+id/IV_genderSide" />
+
+            <TextView
+                android:id="@+id/TV_gender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.2"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:lines="1"
+                android:textSize="14dp"
+                android:fontFamily="sans-serif-light"
+               />
+
+             <TextView
+                 android:id="@+id/textView22134"
+                 android:layout_width="0dp"
+                 android:layout_weight="0.2"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:layout_centerVertical="true"
+                 android:drawablePadding="10dp"
+                 android:drawableRight="@drawable/edit_profile_arrow_white"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textColor="#f95800"
+                 android:textStyle="bold" />
+       </LinearLayout>>
+
+         <LinearLayout
+             android:orientation="horizontal"
+             android:weightSum="4"
+            android:id="@+id/RR_age"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:drawableRight="@drawable/edit_profile_arrow_offwhite"
+            android:gravity="left|center"
+            android:layout_margin="10dp" >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="40dp"
+                android:src="@drawable/icon_proview_age"
+                android:id="@+id/IV_ageSide"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                android:text="@string/age"
+                android:textSize="16dp"
+                android:textColor="#474747"
+
+                android:id="@+id/textView" />
+
+            <TextView
+                android:id="@+id/TV_age"
+                android:layout_width="0dp"
+                android:layout_weight="2.2"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:lines="1"
+                android:textSize="14dp"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginRight="5dp"/>
+             <TextView
+                 android:id="@+id/textView2212"
+                 android:layout_width="0dp"
+                 android:layout_weight="0.2"
+                 android:layout_height="wrap_content"
+                 android:drawablePadding="10dp"
+                 android:drawableRight="@drawable/edit_profile_arrow_white"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textColor="#f95800"
+                 android:textStyle="bold"
+                 android:layout_alignTop="@+id/textView"
+                 android:layout_alignParentEnd="true" />
+       </LinearLayout>>
+
+         <LinearLayout
+             android:orientation="horizontal"
+             android:weightSum="4"
+            android:id="@+id/RR_jobTitle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="left|center"
+            android:layout_margin="10dp" >
+
+             <ImageView
+                 android:layout_width="0dp"
+                 android:layout_height="40dp"
+                 android:layout_weight="0.6"
+                 android:src="@drawable/icon_proview_jobtitle"
+                 android:id="@+id/IV_jobTitle"
+
+                 android:layout_centerVertical="true"
+                 android:layout_alignParentStart="true"
+                 />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                android:text="@string/job_title"
+                android:textSize="16dp"
+                android:textColor="#474747"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/IV_jobTitle" />
+             <TextView
+                 android:id="@+id/TV_jobTitle"
+                 android:layout_width="0dp"
+                 android:layout_weight="2.2"
+                 android:layout_height="wrap_content"
+                 android:ellipsize="end"
+                 android:gravity="right"
+                 android:lines="1"
+                 android:textSize="14dp"
+                 android:fontFamily="sans-serif-light"
+                 android:layout_marginRight="5dp"/>
+             <TextView
+                 android:id="@+id/textView221"
+                 android:layout_width="0dp"
+                 android:layout_weight="0.2"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:layout_centerVertical="true"
+                 android:drawablePadding="10dp"
+                 android:drawableRight="@drawable/edit_profile_arrow_white"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textColor="#f95800"
+                 android:textStyle="bold" />
+
+       </LinearLayout>>
+
+         <LinearLayout
+             android:orientation="horizontal"
+             android:weightSum="4"
+             android:id="@+id/RR_company"
+             android:layout_width="match_parent"
+             android:layout_height="40dp"
+             android:gravity="left|center"
+             android:layout_margin="10dp" >
+             <ImageView
+                 android:layout_width="0dp"
+                 android:layout_weight="0.6"
+                 android:layout_height="40dp"
+                 android:src="@drawable/icon_proview_company"
+                 android:id="@+id/IV_companySide"
+                 android:layout_centerVertical="true"
+                 android:layout_alignParentStart="true"
+                 />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                android:text="@string/company"
+                android:textSize="16dp"
+                android:textColor="#474747"
+                android:layout_alignTop="@+id/TV_company"
+                android:layout_toEndOf="@+id/IV_companySide" />
+             <TextView
+                 android:id="@+id/TV_company"
+                 android:layout_width="0dp"
+                 android:layout_weight="2.2"
+                 android:layout_height="wrap_content"
+                 android:layout_alignBaseline="@+id/textView21"
+                 android:layout_alignBottom="@+id/textView21"
+                 android:layout_toLeftOf="@+id/textView21"
+                 android:ellipsize="end"
+                 android:gravity="right"
+                 android:lines="1"
+                 android:textSize="14dp"
+                 android:fontFamily="sans-serif-light"
+                 android:layout_marginRight="5dp"/>
+             <TextView
+                 android:id="@+id/textView21"
+                 android:layout_width="0dp"
+                 android:layout_weight="0.2"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:layout_centerVertical="true"
+                 android:drawablePadding="10dp"
+                 android:drawableRight="@drawable/edit_profile_arrow_white"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textColor="#f95800"
+                 android:textStyle="bold" />
+       </LinearLayout>>
+
+         <LinearLayout
+             android:orientation="horizontal"
+             android:weightSum="4"
+            android:id="@+id/RR_biography"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="left|center"
+            android:layout_margin="10dp" >
+             <ImageView
+                 android:layout_width="0dp"
+                 android:layout_height="40dp"
+                 android:layout_weight="0.6"
+                 android:src="@drawable/icon_proview_bipgraphy"
+                 android:id="@+id/IV_bioSide"
+                 />
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:text="@string/biography"
+                 android:textSize="16dp"
+                 android:textColor="#474747"
+                />
+
+            <TextView
+                android:id="@+id/TV_biography"
+                android:layout_width="0dp"
+                android:layout_weight="2.2"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView22"
+                android:layout_toLeftOf="@+id/textView22"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:lines="1"
+                android:textSize="14dp"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginRight="5dp"/>
+
+
+             <TextView
+                 android:id="@+id/textView22"
+                 android:layout_width="0dp"
+                 android:layout_weight="0.2"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:layout_centerVertical="true"
+                 android:drawablePadding="10dp"
+                 android:drawableRight="@drawable/edit_profile_arrow_white"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textColor="#f95800"
+                 android:textStyle="bold" />
+       </LinearLayout>>
+    </LinearLayout>
+
+</RelativeLayout>

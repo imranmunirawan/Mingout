@@ -1,0 +1,175 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <!--TextView
+        android:id="@+id/TV_interest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TV_status"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#fff" /-->
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:padding="10dp"
+        android:layout_below="@+id/TV_interest"
+        android:layout_alignParentStart="true"
+        android:id="@+id/LL_mainButtons">
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:background="@drawable/button_dashboard"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginRight="13dp"
+            android:layout_marginLeft="18dp"
+            android:id="@+id/LL_social_bg">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="15dp"
+                android:src="@drawable/dashboarrd_button_inner_icon"
+                android:layout_marginRight="7dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Social"
+                android:textColor="@android:color/white"
+                android:textSize="17dp"
+                android:fontFamily="sans-serif-light"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="15dp"
+                android:src="@drawable/dashboard_arrow_icon"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_dashboard_white"
+            android:padding="12dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginRight="18dp"
+            android:id="@+id/LL_business_bg">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="15dp"
+                android:src="@drawable/dashboarrd_button_inner_icon"
+                android:layout_marginRight="7dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Business"
+                android:textColor="#e36b00"
+                android:textSize="17dp"
+                android:fontFamily="sans-serif-light"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="15dp"
+                android:src="@drawable/dashboard_arrow_icon"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/RL_profileImage"
+        android:padding="12dp"
+        android:layout_below="@+id/LL_mainButtons"
+        android:layout_alignParentStart="true">
+
+        <com.mingout.util.RoundedImageView
+            android:id="@+id/IV_logo"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dashboard_test_profile_img"
+            app:riv_border_color="#ffffff"
+            app:riv_mutate_background="true"
+            app:riv_corner_radius="20dp"
+            app:riv_border_width="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/textView3"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/RL_profileImage"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/TV_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nick Bailey"
+            android:textColor="#fff"
+            android:textSize="30dp"
+            android:fontFamily="sans-serif-light"/>
+
+        <TextView
+            android:id="@+id/TV_ageDivider"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:background="#fff"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/TV_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#fff"
+            android:textSize="30dp"
+            android:text="--"
+            android:fontFamily="sans-serif-light"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout1"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@mipmap/dashboard_main_logo_bg"
+            android:id="@+id/IV_bgQr"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/IV_qrCode"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/dashboard_qr_img"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</LinearLayout>

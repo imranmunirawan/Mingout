@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="2"
+    android:background="@mipmap/dashboard_bg">
+    <include layout="@layout/toolbar"/>
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="0.1"
+        android:background="#fff"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:id="@+id/LL_social"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/icon_social"
+                android:id="@+id/IV_social"/>
+
+            <Button
+                android:id="@+id/B_social"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="@string/social"
+                android:textColor="#7f8080"
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-light" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="45dp"
+            android:background="#e5e5e5"/>
+
+        <LinearLayout
+            android:id="@+id/LL_business"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/icon_business"
+                android:id="@+id/IV_business"/>
+            <Button
+                android:id="@+id/B_business"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawablePadding="3dp"
+                android:text="@string/business"
+                android:textColor="#7f8080"
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-light"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="2"
+        android:background="#e5e5e5">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/TV_socailArrow"
+                android:layout_width="50dp"
+                android:layout_height="3dp"
+                android:background="#FF9533"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="1dp"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/TV_businessArrow"
+                android:layout_width="50dp"
+                android:layout_height="3dp"
+                android:background="#FF9533"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="1dp"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_weight="1.9" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

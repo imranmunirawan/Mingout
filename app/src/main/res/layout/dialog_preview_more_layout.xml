@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/alert_dialog_shape"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/B_billboard"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/billboard"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/B_facebookStatus"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/B_billboard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/facebook_status"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/B_help"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/B_billboard"
+        android:layout_below="@+id/B_contactUs"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/history"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/B_gymWorkOutPlan"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/B_help"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/gym_workout_plan"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/B_contactUs"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/B_help"
+        android:layout_below="@+id/B_billboard"
+        android:layout_marginBottom="14dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/Contact_us"
+        android:textColor="#fff" />
+
+</LinearLayout>

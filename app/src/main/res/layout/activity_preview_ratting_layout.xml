@@ -1,0 +1,181 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mingout.activities.PreviewRattingActivity" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary" >
+
+        <TextView
+            android:id="@+id/TV_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/rating"
+            android:textColor="#fff"
+            android:textSize="@dimen/header_title_size" />
+
+        <TextView
+            android:id="@+id/TV_save"
+            android:layout_width="@dimen/header_btn_save_size"
+            android:layout_height="@dimen/header_btn_save_size"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/save"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/relativeLayout1"
+        android:fillViewport="true" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:progressTint="#FDB016"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:id="@+id/ratingBar1"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/ET_comment1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/TV_review1"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/TV_review1"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_white_shape"
+                android:ems="10"
+                android:padding="8dp"
+                android:textColor="#b4bac8"
+                android:textSize="14dp">
+            </EditText>
+
+            <TextView
+                android:id="@+id/TV_review2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ET_comment1"
+                android:layout_below="@+id/ET_comment1"
+                android:layout_marginTop="15dp"
+                android:text="Service Quality"
+                android:textSize="15dp"
+                android:textColor="#f95801" />
+
+            <EditText
+                android:id="@+id/ET_comment2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/TV_review2"
+                android:layout_alignRight="@+id/ET_comment1"
+                android:layout_below="@+id/TV_review2"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_white_shape"
+                android:ems="10"
+                android:padding="8dp"
+                android:textColor="#b4bac8" />
+
+            <TextView
+                android:id="@+id/TV_review1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/ratingBar1"
+                android:layout_marginLeft="25dp"
+                android:text="Food Quality"
+                android:textSize="14dp"
+                android:textColor="#f95801" />
+
+            <FrameLayout
+                android:id="@+id/frag_container_rattingCommentList"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_alignLeft="@+id/ET_comment2"
+                android:layout_alignRight="@+id/ET_comment2"
+                android:layout_below="@+id/ET_comment2"
+                android:layout_marginTop="10dp" >
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/TV_comment2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ET_comment2"
+                android:layout_alignLeft="@+id/TV_comment1"
+                android:text="Fair"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#666"
+                android:textSize="15dp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/TV_comment1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ET_comment1"
+                android:layout_marginLeft="26dp"
+                android:layout_toRightOf="@+id/TV_review2"
+                android:text="Nice and good"
+                android:textColor="#666"
+                android:textSize="15dp"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/ET_comment3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/frag_container_rattingCommentList"
+                android:layout_alignRight="@+id/frag_container_rattingCommentList"
+                android:layout_below="@+id/frag_container_rattingCommentList"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_white_shape"
+                android:ems="10"
+                android:hint="@string/comment_here"
+                android:minLines="2"
+                android:paddingBottom="6dp"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:paddingTop="6dp"
+                android:textColor="#666"
+                android:visibility="invisible" >
+            </EditText>
+
+            <Button
+                android:id="@+id/B_addComment"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignRight="@+id/ET_comment3"
+                android:layout_below="@+id/ET_comment3"
+                android:layout_marginTop="8dp"
+                android:background="#f95801"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/add_comment"
+                android:textColor="#fff" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

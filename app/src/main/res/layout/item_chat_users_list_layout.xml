@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/IV_logo"
+            android:layout_width="130dp"
+            android:layout_height="140dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dashboard_test_profile_img" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="18dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/TV_type"
+            android:src="@drawable/arrow_black" />
+
+        <TextView
+            android:id="@+id/TV_type"
+            android:layout_width="110dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/TV_name"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/imageView2"
+            android:background="@drawable/round_social_shape"
+            android:drawableLeft="@drawable/social_icon"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="10dp"
+            android:paddingTop="2dp"
+            android:text="Social Profile"
+            android:textColor="#fff"
+            android:textSize="8dp" />
+
+        <TextView
+            android:id="@+id/TV_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/IV_logo"
+            android:layout_below="@+id/TV_gender"
+            android:layout_marginLeft="6dp"
+            android:layout_toLeftOf="@+id/imageView2"
+            android:layout_toRightOf="@+id/IV_logo"
+            android:ellipsize="end"
+            android:text="Status : newly married"
+            android:textColor="#8b8f92"
+            android:textSize="9dp" />
+
+        <TextView
+            android:id="@+id/TV_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/IV_logo"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@+id/IV_logo"
+            android:text="Adnan Khan"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#009ed8" />
+
+        <TextView
+            android:id="@+id/TV_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView2"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/IV_logo"
+            android:text="male"
+            android:textSize="14dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/TV_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/TV_gender"
+            android:layout_alignBottom="@+id/TV_gender"
+            android:layout_toRightOf="@+id/TV_name"
+            android:text="30"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/TV_newMessageCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/TV_status"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="18dp"
+            android:layout_toRightOf="@+id/TV_status"
+            android:background="@drawable/new_message_round_square"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mingout.activities">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="com.mingout.util.Constants"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:label="MingOut"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_splash"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DashBoardActivity"
+            android:label="@string/title_activity_dash_board"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditBusinessSocialDataActivity"
+            android:label="@string/title_activity_edit_business_client"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuSettingsActivity"
+            android:label="@string/title_activity_menu_settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProviewActivity"
+            android:label="@string/title_activity_proview"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ReviewItemDetailActivity"
+            android:label="@string/title_activity_review_item_detail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PreviewRattingActivity"
+            android:label="@string/title_activity_preview_ratting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BillboardActivity"
+            android:label="@string/title_activity_billboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddBillboardActivity"
+            android:label="@string/title_activity_add_billboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PreviewHistoryActivity"
+            android:label="@string/title_activity_preview_history"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GymWorkPlanDevicesActivity"
+            android:label="@string/title_activity_gym_work_plan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GymWorkoutPlanDevicesEditActivity"
+            android:label="@string/title_activity_gym_workout_plan_edit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WorkoutPlanDescriptionActivity"
+            android:label="@string/title_activity_workout_plan_description"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PreviewFacebookStatusActivity"
+            android:label="@string/title_activity_preview_facebook_status"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BillboardAddSubjectActivity"
+            android:label="@string/title_activity_billboard_add_subject"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BillboardAddCategoryActivity"
+            android:label="@string/title_activity_billboard_add_category"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BillboardAddPriceActivity"
+            android:label="@string/title_activity_billboard_add_price"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BillboardAddDetailActivity"
+            android:label="@string/title_activity_billboard_add_detail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProfileGalleryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChatUserActivity"
+            android:label="@string/title_activity_chat_user"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".GymWorkPlanActivity"
+            android:label="@string/title_activity_gym_work_plan" />
+        <activity
+            android:name=".GymWorkPlanEditActivity"
+            android:label="@string/title_activity_gym_work_plan_edit" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:theme" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="5b95adbdf4fd3f556f24ae6c74a2473ea966c5e4" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <activity android:name=".test" />
+        <activity android:name=".AddOnMenuActivity" />
+        <activity android:name=".LoyaltyProgramActivity" />
+        <activity android:name=".MatchesActivity" />
+        <activity android:name=".MatchesSettingsActivity"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MingOut</string>
+    <string name="hello_world">Hello world!</string>
+    <!--string name="facebook_app_id">197776403692720</string-->
+    <string name="facebook_app_id">1712099429105924</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_dash_board">DashBoardActivity</string>
+    <string name="title_activity_profile_gallery">ProfileGalleryActivity</string>
+    <string name="title_activity_edit_profile">EditProfileActivity</string>
+    <string name="title_activity_edit_business_client">EditBusinessClientActivity</string>
+    <string name="title_activity_menu_contact_us">MenuContactUsActivity</string>
+    <string name="title_activity_menu_settings">MenuSettingsActivity</string>
+    <string name="title_activity_menu_help">MenuHelpActivity</string>
+    <string name="title_activity_proview">ProviewActivity</string>
+    <string name="title_activity_review_item_detail">ReviewItemDetailActivity</string>
+    <string name="title_activity_preview_ratting">PreviewRattingActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_billboard">BillboardActivity</string>
+    <string name="title_activity_add_billboard">AddBillboardActivity</string>
+    <string name="title_activity_preview_history">PreviewHistoryActivity</string>
+    <string name="title_activity_gym_work_plan">GymWorkPlanActivity</string>
+    <string name="title_activity_gym_workout_plan_edit">GymWorkoutPlanEditActivity</string>
+    <string name="title_activity_workout_plan_description">WorkoutPlanDescriptionActivity</string>
+    <string name="title_activity_preview_facebook_status">PreviewFacebookStatusActivity</string>
+    <string name="title_activity_preview_billboard_data_entries">PreviewBillboardDataEntriesActivity</string>
+    <string name="title_activity_billboard_add_subject">BillboardAddSubjectActivity</string>
+    <string name="title_activity_billboard_add_category">BillboardAddCategoryActivity</string>
+    <string name="title_activity_billboard_add_price">BillboardAddPriceActivity</string>
+    <string name="title_activity_billboard_add_detail">BillboardAddDetailActivity</string>
+    <string name="title_activity_chat_user">ChatUserActivity</string>
+
+    <!-- Social Hebrew -->
+
+    <string name="my_phrase">Phrase</string>
+    <string name="gender">Gender</string>
+    <string name="status">Status</string>
+    <string name="age">Age</string>
+    <string name="height">Height</string>
+    <string name="looking_for">Looking For</string>
+    <string name="about_me">About Me</string>
+    <string name="want_to_meet">Want to meet</string>
+
+    <!-- Social Hebrew Close -->
+
+
+    <!-- _______________________________________________________________________________ -->
+
+
+    <!-- Business Hebrew -->
+
+    <string name="job_title">Job Title</string>
+    <string name="company">Company</string>
+    <string name="biography">Biography</string>
+
+    <!-- Business Hebrew Close -->
+
+
+    <!-- _______________________________________________________________________________ -->
+
+
+    <!-- Random Hebrew -->
+
+    <string name="options">Options</string>
+    <string name="Exit">Exit</string>
+    <string name="Preview">Profile</string>
+    <string name="photo">Photo</string>
+    <string name="social">Social</string>
+    <string name="business">Business</string>
+    <string name="social_profile">Social Profile</string>
+    <string name="business_profile">Business Profile</string>
+    <string name="edit_profile">Profile Update</string>
+    <string name="Contact_us">Contact Us</string>
+    <string name="settings">Settings</string>
+    <string name="help">Help</string>
+    <string name="chat">Chat</string>
+    <string name="more">More</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="Reviews">Reviews</string>
+    <string name="promotions">Promotions</string>
+    <string name="gps_error_message">Ensure your GPS is activated to enable MingOut to automatically get your location for maximum benefits of using the application</string>
+    <string name="billboard">Billboard</string>
+    <string name="facebook_status">Post Facebook status</string>
+    <string name="history">History</string>
+    <string name="gym_workout_plan">Gym Workout Plan</string>
+    <string name="contact_us">Contact us</string>
+    <string name="status_update">Status Updated</string>
+    <string name="post_status">Post Status</string>
+    <string name="promotions_skip_message">You can skip this page in</string>
+    <string name="Profile_list">Profile List</string>
+    <string name="rating">Rating</string>
+    <string name="comments">Comments</string>
+    <string name="add_comment">Add Comment</string>
+    <string name="comment_here">Comment Here</string>
+    <string name="please_wait">Please wait ..</string>
+    <string name="search_by_name">Search by name</string>
+    <string name="to">to</string>
+    <string name="any">Any</string>
+    <string name="select">Select</string>
+    <string name="cancel">Cancel</string>
+    <string name="feedback">Feedback</string>
+    <string name="bug">Bug</string>
+    <string name="other">Other</string>
+
+    <!-- Contact Us -->
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="contact_purpose">Contact Purpose</string>
+    <string name="subject">Subject</string>
+    <string name="description">Description</string>
+
+
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+    <!-- Settings -->
+    <string name="enable_feedback_auto_check_in">Enable feedback auto check in</string>
+    <string name="show_gay_icon">Show gay icon</string>
+
+    <!-- Random Hebrew Close -->
+
+    <string name="title_activity_gym_work_plan_edit">GymWorkPlanEditActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

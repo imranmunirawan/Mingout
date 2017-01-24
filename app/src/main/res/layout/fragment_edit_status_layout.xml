@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/round_black_with_whitebg_shape"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/RB_single"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView1"
+                android:gravity="right|center"
+                android:text="Single"
+                android:buttonTint="#ffffff"
+                android:textColor="#ffffff"
+                android:textSize="16dp"/>
+
+            <RadioButton
+                android:id="@+id/RB_inRelation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView1"
+                android:gravity="right|center"
+                android:text="In Relationship"
+                android:textColor="#ffffff"
+                android:buttonTint="#ffffff"
+                android:textSize="16dp"
+                android:layout_marginTop="5dp"/>
+
+            <RadioButton
+                android:id="@+id/RB_married"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView1"
+                android:gravity="right|center"
+                android:text="Married"
+                android:textColor="#ffffff"
+                android:buttonTint="#ffffff"
+                android:textSize="16dp"
+                android:layout_marginTop="5dp"/>
+
+            <RadioButton
+                android:id="@+id/RB_divorced"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView1"
+                android:gravity="right|center"
+                android:text="Divorced"
+                android:textColor="#ffffff"
+                android:buttonTint="#ffffff"
+                android:textSize="16dp"
+                android:layout_marginTop="5dp"/>
+
+            <RadioButton
+                android:id="@+id/RB_widow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView1"
+                android:gravity="right|center"
+                android:text="Widow/er"
+                android:textColor="#ffffff"
+                android:buttonTint="#ffffff"
+                android:textSize="16dp"
+                android:layout_marginTop="5dp"/>
+        </RadioGroup>
+    </LinearLayout>
+</RelativeLayout>

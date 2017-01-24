@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/status_update"
+            android:textColor="#fff"
+            android:textSize="@dimen/header_title_size" />
+
+        <TextView
+            android:id="@+id/TV_exit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/TV_send"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/contact_us_send"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/contact_us_description"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="@string/post_status"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#f95801" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_white_shape"
+        android:ems="10"
+        android:gravity="left|top"
+        android:minLines="5"
+        android:padding="5dp"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp" >
+    </EditText>
+
+</LinearLayout>

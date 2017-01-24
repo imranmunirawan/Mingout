@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:id="@+id/relativeLayout"
+        android:layout_marginRight="1dp"
+        android:layout_marginLeft="1dp">
+
+        <com.mingout.util.RoundedImageView
+            android:id="@+id/IV_main"
+            android:layout_width="130dp"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/test_person"
+            app:riv_border_color="#c0c0c0"
+            app:riv_mutate_background="true"
+            app:riv_corner_radius="7dp"
+            app:riv_border_width="1dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:id="@+id/TV_title"
+            android:text="Aliya Bhatt"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:textColor="#ffffff"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-light"/>
+    </RelativeLayout>
+
+</RelativeLayout>

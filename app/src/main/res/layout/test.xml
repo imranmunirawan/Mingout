@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:padding="15dp" >
+
+        <TextView
+            android:id="@+id/TV_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="John Smith"
+            android:textColor="#01da95"
+            android:textSize="16dp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar1"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/TV_name"
+            android:layout_marginTop="5dp"
+            android:maxHeight="15dp"
+            android:progressTint="#FDB016"
+            android:rating="3" />
+
+        <TextView
+            android:id="@+id/TV_label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ratingBar1"
+            android:layout_marginTop="5dp"
+            android:text="Food Quality :"
+            android:textSize="14dp"
+            android:textColor="#444" />
+
+        <TextView
+            android:id="@+id/TV_label2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/TV_label1"
+            android:layout_marginTop="5dp"
+            android:text="Service Quality:"
+            android:textSize="14dp"
+            android:textColor="#444" />
+
+        <TextView
+            android:id="@+id/TV_type"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/TV_name"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/round_business_shape"
+            android:drawableLeft="@drawable/business_icon"
+            android:gravity="center"
+            android:minWidth="110dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="10dp"
+            android:paddingTop="2dp"
+            android:text="Business"
+            android:textColor="#fff"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/TV_review2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/TV_label2"
+            android:layout_alignBottom="@+id/TV_label2"
+            android:layout_marginLeft="35dp"
+            android:layout_toRightOf="@+id/TV_label2"
+            android:text="Average"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/TV_review1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/TV_label2"
+            android:layout_alignLeft="@+id/TV_review2"
+            android:text="Good"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

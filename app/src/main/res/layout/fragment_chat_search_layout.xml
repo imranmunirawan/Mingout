@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#c0c0c0"
+        android:padding="10dp" >
+
+        <EditText
+            android:id="@+id/ET_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/TV_cancel"
+            android:background="@drawable/round_simple_shape"
+            android:drawableLeft="@drawable/search_icon"
+            android:drawablePadding="3dp"
+            android:ems="10"
+            android:hint="@string/search_by_name"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:textColor="#909092" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/TV_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/ET_name"
+            android:layout_alignBottom="@+id/ET_name"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:text="@string/cancel"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#fc8706" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/relativeLayout1"
+        android:background="@color/colorPrimary"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/gender"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#fff" />
+
+        <EditText
+            android:id="@+id/ET_gender"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView2"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@+id/textView2"
+            android:background="@drawable/round_chat_box_orange_shape"
+            android:ems="10"
+            android:gravity="center"
+            android:textColor="#666"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/ET_gender"
+            android:layout_alignBottom="@+id/ET_gender"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/ET_gender"
+            android:text="@string/age"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#fff" />
+
+        <EditText
+            android:id="@+id/ET_ageFrom"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView3"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@+id/textView3"
+            android:background="@drawable/round_chat_box_orange_shape"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="number"
+            android:textColor="#666"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/ET_ageFrom"
+            android:layout_alignBottom="@+id/ET_ageFrom"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/ET_ageFrom"
+            android:text="@string/to"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#fff" />
+
+        <EditText
+            android:id="@+id/ET_ageTo"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView4"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@+id/textView4"
+            android:background="@drawable/round_chat_box_orange_shape"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="number"
+            android:textColor="#666"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

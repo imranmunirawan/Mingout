@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/test_person"
+        android:id="@+id/IV_logo"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        android:layout_above="@+id/linearLayout2" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout2"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="#E88951"
+            android:id="@+id/LL_yes">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/matches_yes"
+                android:id="@+id/IV_yes"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:textSize="13dp"
+                android:textColor="#ffffff"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="#444444"
+            android:id="@+id/LL_no">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/matches_no"
+                android:id="@+id/IV_no"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textSize="13dp"
+                android:textColor="#ffffff"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="45dp"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="Nina Keller | 36"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TV_name"
+            android:textSize="26dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="#ffffff"
+            android:fontFamily="sans-serif-light"/>
+
+        <TextView
+            android:text="Brooklyn, NY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView15"
+            android:textSize="17dp"
+            android:textColor="#ffffff"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_below="@+id/TV_interest"
+            android:layout_alignParentStart="true"
+            android:id="@+id/LL_mainButtons">
+
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_dashboard_white"
+                android:padding="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/LL_chat"
+                android:layout_marginRight="5dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/matches_chat_icon"
+                    android:layout_marginRight="7dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chat"
+                    android:textColor="#e36b00"
+                    android:textSize="14dp"
+                    android:fontFamily="sans-serif-light"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/dashboard_arrow_icon"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_dashboard"
+                android:padding="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+               android:id="@+id/LL_profile">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/dashboard_arrow_icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Profile"
+                    android:textColor="@android:color/white"
+                    android:textSize="14dp"
+                    android:fontFamily="sans-serif-light"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
