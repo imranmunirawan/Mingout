@@ -131,7 +131,7 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 		IV_logo = (ImageView) findViewById(R.id.IV_logo);
 
 		//navigationView = (NavigationView) findViewById(R.id.NV_container);
-		mDrawerLayout = (DrawerLayout) findViewById(drawerLayout);
+	//	mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
 		IV_menu.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -139,7 +139,7 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 			}
 		});
 
-	    mDrawerLayout.setDrawerListener(mDrawerToggle);
+	  //  mDrawerLayout.addDrawerListener(mDrawerToggle);
 
 		// This should be called before `syncState()` on your toggle
 		//	mDrawerLayout.closeDrawer(navigationView);
@@ -193,7 +193,7 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 			}
 		});
 
-		TV_home.setOnClickListener(new OnClickListener() {
+/*		TV_home.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				IV_home.setImageResource(R.drawable.dashboard_home_active);
@@ -292,7 +292,7 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 				startActivity(ii);
 				mDrawerLayout.closeDrawers();
 			}
-		});
+		});   */
 
 		setBehindView();
 	}
