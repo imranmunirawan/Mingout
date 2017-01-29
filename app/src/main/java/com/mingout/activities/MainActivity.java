@@ -1,8 +1,6 @@
 package com.mingout.activities;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -18,12 +16,12 @@ import com.mingout.models.FacebookDataModel;
 import com.mingout.util.ConnectionTask;
 import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.http.LoggingEventHandler;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -84,10 +82,19 @@ public class MainActivity extends Activity implements ResultJSON, DialogAgeListe
             }
 
             @Override
-            public void onCancel() {}
+            public void onCancel() {
+
+
+            }
 
             @Override
-            public void onError(FacebookException exception) {}
+            public void onError(FacebookException exception)
+
+            {
+                String error =  exception.toString();
+
+
+            }
         });
     }
 

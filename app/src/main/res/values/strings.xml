@@ -4,7 +4,7 @@
     <string name="app_name">MingOut</string>
     <string name="hello_world">Hello world!</string>
     <!--string name="facebook_app_id">197776403692720</string-->
-    <string name="facebook_app_id">1712099429105924</string>
+    <string name="facebook_app_id">1244563805579272</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="title_activity_dash_board">DashBoardActivity</string>
     <string name="title_activity_profile_gallery">ProfileGalleryActivity</string>

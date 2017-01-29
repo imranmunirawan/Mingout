@@ -23,10 +23,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.facebook.AccessToken;
+import com.facebook.AccessTokenTracker;
+import com.facebook.CallbackManager;
 import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
-import com.facebook.HttpMethod;
 import com.google.gson.Gson;
 import com.mingout.dialog.MyAlertDialog;
 import com.mingout.models.FacebookDataModel;
@@ -43,6 +44,7 @@ public class SplashActivity extends Activity implements ResultJSON {
 	FacebookDataModel facebookDataObj;
 	String responseJson;
 	AccessToken accessToken;
+    String accessTokenStr;
 	ImageView IV_centerBg, IV_logo;
 
 	@Override
@@ -65,13 +67,16 @@ public class SplashActivity extends Activity implements ResultJSON {
 		IV_logo.startAnimation(AnimationUtils.loadAnimation(SplashActivity.this, R.anim.blink));
 
 		FacebookSdk.sdkInitialize(getApplicationContext());
+
 		mPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
-		facebookDataObj = new FacebookDataModel();
 
-		Gson gson = new Gson();
-		String json = mPrefs.getString("facebook_access_token", "");
-		accessToken = gson.fromJson(json, AccessToken.class);
+
+        facebookDataObj = new FacebookDataModel();
+
+			Gson gson = new Gson();
+			String json = mPrefs.getString("facebook_access_token", "");
+			accessToken = gson.fromJson(json, AccessToken.class);
 
 		splashTread = new Thread() {
 			@Override

@@ -83,7 +83,7 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 	ActionBarDrawerToggle mDrawerToggle;
 	View drawerView, drawerContent, mainView;
 	Toolbar toolBar;
-
+	NavigationView navigationView;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -111,6 +111,7 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 		sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
 		TV_title = (TextView) findViewById(R.id.TV_title);
 		TV_home = (TextView) findViewById(R.id.TV_home);
+
 		TV_updateProfile = (TextView) findViewById(R.id.TV_updateProfile);
 		TV_updatePhotos = (TextView) findViewById(R.id.TV_updatePhotos);
 		TV_contactUs = (TextView) findViewById(R.id.TV_contactUs);
@@ -130,16 +131,19 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 		IV_settings = (ImageView) findViewById(R.id.IV_settings);
 		IV_logo = (ImageView) findViewById(R.id.IV_logo);
 
-		//navigationView = (NavigationView) findViewById(R.id.NV_container);
-	//	mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
-		IV_menu.setOnClickListener(new OnClickListener() {
+		navigationView = (NavigationView) findViewById(R.id.NV_container);
+		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+
+
+	IV_menu.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				mainView.setTranslationX(-1000f);
 			}
 		});
 
-	  //  mDrawerLayout.addDrawerListener(mDrawerToggle);
+
+		mDrawerLayout.addDrawerListener(mDrawerToggle);
 
 		// This should be called before `syncState()` on your toggle
 		//	mDrawerLayout.closeDrawer(navigationView);
@@ -178,7 +182,6 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 			businessFrag.setArguments(b);
 		} catch (Exception e) {
 		}
-
 		IV_menu.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -222,7 +225,7 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 				editProfileActivity.setArguments(bundle);
 				ft.replace(R.id.viewPager, editProfileActivity);
 				ft.commit();
-				mDrawerLayout.closeDrawers();
+			//	mDrawerLayout.closeDrawers();
 			}
 		});
 
@@ -234,11 +237,11 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 				IV_updatePhotos.setImageResource(R.drawable.dashboard_update_photos_active);
 				IV_contactUs.setImageResource(R.drawable.callus_inactive);
 				IV_help.setImageResource(R.drawable.help_inactive);
-				mDrawerLayout.closeDrawers();
+				//mDrawerLayout.closeDrawers();
 			}
 		});
 
-		TV_contactUs.setOnClickListener(new OnClickListener() {
+	TV_contactUs.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				IV_home.setImageResource(R.drawable.dashboard_icon_home);
@@ -275,7 +278,6 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 				mDrawerLayout.closeDrawers();
 			}
 		});
-
 		IV_logout.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -526,7 +528,9 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 		}
 
 		@Override
-		protected void onPostExecute(Drawable result) {
+		protected void onPostExecute(Drawable result)
+		{
+
 			super.onPostExecute(result);
 		}
 
