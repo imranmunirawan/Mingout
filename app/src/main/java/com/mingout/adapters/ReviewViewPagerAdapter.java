@@ -1,11 +1,7 @@
 package com.mingout.adapters;
 
-import java.util.List;
-
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,16 +9,17 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.mingout.activities.R;
-import com.mingout.util.Constants;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
+import java.util.List;
+
 public class ReviewViewPagerAdapter extends PagerAdapter {
 
-	private Context context;
 	String imageUrl;
 	List<String> list;
 	int layoutId;
+	private Context context;
 
 	// constructor
 	public ReviewViewPagerAdapter(Context context, int layoutId,
@@ -39,7 +36,7 @@ public class ReviewViewPagerAdapter extends PagerAdapter {
 
 	@Override
 	public boolean isViewFromObject(View view, Object object) {
-		return view == ((RelativeLayout) object);
+		return view == object;
 	}
 
 	@Override
@@ -63,7 +60,7 @@ public class ReviewViewPagerAdapter extends PagerAdapter {
 					}
 				});
 
-		((ViewPager) container).addView(viewLayout);
+		container.addView(viewLayout);
 
 
 
@@ -72,7 +69,7 @@ public class ReviewViewPagerAdapter extends PagerAdapter {
 
 	@Override
 	public void destroyItem(ViewGroup container, int position, Object object) {
-		((ViewPager) container).removeView((RelativeLayout) object);
+		container.removeView((RelativeLayout) object);
 
 	}
 

@@ -1,7 +1,5 @@
 package com.mingout.adapters;
 
-import java.util.List;
-
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
 import com.mingout.models.PreviewBillboardModel;
+
+import java.util.List;
 
 public class WorkOutPlanListAdapter extends
 		ArrayAdapter<PreviewBillboardModel> {
@@ -36,7 +36,7 @@ public class WorkOutPlanListAdapter extends
 	public View getView(final int position, View row, ViewGroup parent) {
 		// TODO Auto-generated method stub
 		if (row == null) {
-			LayoutInflater inflater = ((Activity) context).getLayoutInflater();
+			LayoutInflater inflater = context.getLayoutInflater();
 			row = inflater.inflate(LayoutId, parent, false);
 		}
 

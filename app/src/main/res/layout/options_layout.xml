@@ -11,15 +11,15 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="sans-serif-light"
             android:text="Options"
             android:textColor="#999999"
-            android:textSize="19dp"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/textView10"
-            android:fontFamily="sans-serif-light"/>
+            android:textSize="19dp" />
 
     </RelativeLayout>
 
@@ -29,12 +29,12 @@
         android:layout_height="40dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/button_shape"
         android:text="Contact Us"
-        android:textColor="#fff"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
+        android:textColor="#fff" />
 
     <Button
         android:id="@+id/B_settings"
@@ -42,12 +42,12 @@
         android:layout_height="40dp"
         android:layout_below="@+id/B_billboard"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/button_shape"
         android:text="Settings"
-        android:textColor="#fff"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
+        android:textColor="#fff" />
 
     <Button
         android:id="@+id/B_help"
@@ -55,12 +55,12 @@
         android:layout_height="40dp"
         android:layout_alignLeft="@+id/B_billboard"
         android:layout_below="@+id/B_contactUs"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/button_shape"
         android:text="Help"
-        android:textColor="#fff"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
+        android:textColor="#fff" />
 
 </LinearLayout>

@@ -1,7 +1,5 @@
 package com.mingout.adapters;
 
-import java.util.List;
-
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,8 +10,9 @@ import android.widget.TextView;
 
 import com.mingout.activities.R;
 import com.mingout.models.PreviewRattingCommentModel;
-import com.mingout.util.Constants;
 import com.squareup.picasso.Picasso;
+
+import java.util.List;
 
 public class PreviewRattingCommentListAdapter extends
 		ArrayAdapter<PreviewRattingCommentModel> {
@@ -41,7 +40,7 @@ public class PreviewRattingCommentListAdapter extends
 	public View getView(final int position, View row, ViewGroup parent) {
 		// TODO Auto-generated method stub
 		if (row == null) {
-			LayoutInflater inflater = ((Activity) context).getLayoutInflater();
+			LayoutInflater inflater = context.getLayoutInflater();
 			row = inflater.inflate(LayoutId, parent, false);
 		}
 		PreviewRattingCommentModel obj = productList.get(position);

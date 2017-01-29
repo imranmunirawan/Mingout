@@ -135,35 +135,6 @@ public class ProfileGalleryActivity extends AppCompatActivity implements
         TV_businessArrow.setVisibility(TextView.VISIBLE);
     }
 
-    private class MyPagerAdapter extends FragmentPagerAdapter {
-
-        public MyPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int pos) {
-            switch (pos) {
-
-                case 0:
-
-                    return socialFrag;
-
-                case 1:
-
-                    return businessFrag;
-
-                default:
-                    return socialFrag;
-            }
-        }
-
-        @Override
-        public int getCount() {
-            return 2;
-        }
-    }
-
     @Override
     public void UpdateResult(Object obj) {
         // TODO Auto-generated method stub
@@ -291,6 +262,35 @@ public class ProfileGalleryActivity extends AppCompatActivity implements
         } catch (JSONException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+        }
+    }
+
+    private class MyPagerAdapter extends FragmentPagerAdapter {
+
+        public MyPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int pos) {
+            switch (pos) {
+
+                case 0:
+
+                    return socialFrag;
+
+                case 1:
+
+                    return businessFrag;
+
+                default:
+                    return socialFrag;
+            }
+        }
+
+        @Override
+        public int getCount() {
+            return 2;
         }
     }
 }

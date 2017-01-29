@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+
 import com.mingout.fragments.EditDataAboutMeFragment;
 import com.mingout.fragments.EditDataAgeFragment;
 import com.mingout.fragments.EditDataBiographyFragment;
@@ -19,7 +20,6 @@ import com.mingout.fragments.EditDataMyPhraseFragment;
 import com.mingout.fragments.EditDataSexFragment;
 import com.mingout.fragments.EditDataStatusFragment;
 import com.mingout.fragments.EditDataWantToMeetFragment;
-import com.mingout.fragments.EditProfileActivity;
 import com.mingout.fragments.EditProfileBusinessFragment;
 import com.mingout.fragments.EditProfileSocialFragment;
 import com.mingout.util.Constants;
@@ -213,7 +213,7 @@ public class EditBusinessSocialDataActivity extends Activity {
 	}
 
 	public interface OnSaveButtonPressListner {
-		public void saveButtonPressed();
+		void saveButtonPressed();
 
 	}
 }

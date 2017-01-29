@@ -3,7 +3,6 @@ package com.mingout.activities;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -16,7 +15,6 @@ import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 import com.facebook.HttpMethod;
 import com.google.gson.Gson;
-import com.mingout.util.Constants;
 
 public class PreviewFacebookStatusActivity extends Activity {
 

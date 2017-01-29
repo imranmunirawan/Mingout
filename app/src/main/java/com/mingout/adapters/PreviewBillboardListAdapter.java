@@ -1,7 +1,5 @@
 package com.mingout.adapters;
 
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -11,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.mingout.activities.R;
@@ -20,6 +17,8 @@ import com.mingout.models.PreviewBillboardModel;
 import com.mingout.util.Constants;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
+
+import java.util.List;
 
 public class PreviewBillboardListAdapter extends
 		ArrayAdapter<PreviewBillboardModel> {
@@ -47,7 +46,7 @@ public class PreviewBillboardListAdapter extends
 	public View getView(final int position, View row, ViewGroup parent) {
 		// TODO Auto-generated method stub
 		if (row == null) {
-			LayoutInflater inflater = ((Activity) context).getLayoutInflater();
+			LayoutInflater inflater = context.getLayoutInflater();
 			row = inflater.inflate(LayoutId, parent, false);
 		}
 		final PreviewBillboardModel obj = productList.get(position);
@@ -63,7 +62,7 @@ public class PreviewBillboardListAdapter extends
 		TV_desc.setText(obj.getDesc());
 
 		LL_type.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub

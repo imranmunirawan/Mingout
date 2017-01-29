@@ -1,8 +1,5 @@
 package com.mingout.dialog;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.Fragment;
@@ -19,6 +16,9 @@ import android.widget.TextView;
 
 import com.mingout.activities.R;
 import com.mingout.util.Constants;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ChatAgeToDialog extends Dialog implements
 		View.OnClickListener {
@@ -126,6 +126,6 @@ public class ChatAgeToDialog extends Dialog implements
 	}
 
 	public interface AgeToListner {
-		public void setAgeTo(String age);
+		void setAgeTo(String age);
 	}
 }

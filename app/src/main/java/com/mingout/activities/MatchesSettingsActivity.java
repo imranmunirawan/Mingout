@@ -3,7 +3,6 @@ package com.mingout.activities;
 import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -11,7 +10,6 @@ import android.widget.TextView;
 import com.mingout.dialog.ChatAgeFromDialog;
 import com.mingout.dialog.ChatAgeToDialog;
 import com.mingout.dialog.ChatGenderDialog;
-import com.mingout.fragments.ChatSearchFragment;
 import com.mingout.util.Constants;
 
 public class MatchesSettingsActivity extends Activity implements ChatGenderDialog.GenderListner {

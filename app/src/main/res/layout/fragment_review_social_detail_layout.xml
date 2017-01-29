@@ -1,9 +1,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -18,25 +16,25 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="190dp"
-                    android:src="@mipmap/dashboard_bg"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/dashboard_bg" />
 
                 <TextView
                     android:id="@+id/TV_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
                     android:text="Social Profile"
                     android:textColor="#fff"
-                    android:textSize="18dp"
-                    android:gravity="center"
-                    android:padding="5dp"/>
+                    android:textSize="18dp" />
 
                 <android.support.v4.view.ViewPager
                     android:id="@+id/viewPager"
                     android:layout_width="fill_parent"
                     android:layout_height="230dp"
-                    android:layout_below="@+id/TV_title"
-                    android:layout_alignParentStart="true">
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/TV_title">
                 </android.support.v4.view.ViewPager>
             </RelativeLayout>
 
@@ -50,48 +48,48 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|left"
                     android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
                     android:text="M.Shehzad Khan"
                     android:textColor="#ff9432"
                     android:textSize="23dp"
-                    android:gravity="center_vertical"
                     android:textStyle="bold"/>
 
                 <ImageView
                     android:id="@+id/IV_genderLogo"
                     android:layout_width="23dp"
                     android:layout_height="23dp"
+                    android:layout_marginLeft="10dp"
                     android:gravity="center_vertical"
-                    android:src="@drawable/d_male"
-                    android:layout_marginLeft="10dp"/>
+                    android:src="@drawable/d_male" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="20dp">
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp">
 
                 <LinearLayout
                     android:layout_width="100dp"
-                    android:background="@drawable/round_social_shape"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_social_shape">
 
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/social_icon"
-                        android:layout_marginLeft="10dp"/>
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/social_icon" />
 
                     <TextView
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
+                        android:layout_marginLeft="2dp"
                         android:gravity="center_vertical|left"
                         android:text="Social"
                         android:textColor="#fff"
-                        android:textSize="14dp"
-                        android:layout_marginLeft="2dp"/>
+                        android:textSize="14dp" />
                 </LinearLayout>
 
 
@@ -111,65 +109,65 @@
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/edit_profile_arrow_offwhite"
                     android:gravity="left|center"
-                    android:paddingRight="15dp"
-                    android:paddingLeft="15dp"
                     android:orientation="vertical"
-                    android:paddingBottom="12dp">
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
 
                     <RelativeLayout
+                        android:id="@+id/RL_phraseTop"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RL_phraseTop">
+                        android:layout_height="wrap_content">
 
                         <ImageView
+                            android:id="@+id/IV_phraseSide"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
-                            android:src="@drawable/icon_proview_phrase"
                             android:layout_alignParentLeft="true"
-                            android:id="@+id/IV_phraseSide"/>
+                            android:src="@drawable/icon_proview_phrase" />
 
                         <TextView
-                            android:layout_toEndOf="@+id/IV_phraseSide"
                             android:id="@+id/textView3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
+                            android:layout_marginLeft="7dp"
+                            android:layout_toEndOf="@+id/IV_phraseSide"
                             android:text="@string/my_phrase"
-                            android:textSize="14dp"
                             android:textColor="#474747"
-                            android:layout_marginLeft="7dp"/>
+                            android:textSize="14dp" />
 
                         <ImageView
+                            android:id="@+id/IV_showPhrase"
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:src="@mipmap/icon_arrow"
                             android:layout_centerVertical="true"
-                            android:layout_toEndOf="@+id/textView3"
                             android:layout_marginStart="10dp"
-                            android:id="@+id/IV_showPhrase" />
+                            android:layout_toEndOf="@+id/textView3"
+                            android:src="@mipmap/icon_arrow" />
                     </RelativeLayout>
 
                     <LinearLayout
+                        android:id="@+id/LL_phrase"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:id="@+id/LL_phrase"
                         android:visibility="gone">
 
                         <TextView
                             android:layout_width="fill_parent"
                             android:layout_height="1dp"
-                            android:background="#c0c0c0"
+                            android:layout_marginBottom="5dp"
                             android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"/>
+                            android:background="#c0c0c0" />
 
                         <TextView
                             android:id="@+id/TV_myPhrase"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="12dp"
                             android:layout_marginLeft="32dp"
-                            android:fontFamily="sans-serif-light"/>
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="12dp" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -192,33 +190,33 @@
                         android:id="@+id/TV_gender"
                         android:layout_width="125dp"
                         android:layout_height="wrap_content"
-                        android:drawablePadding="10dp"
-                        android:gravity="right"
-                        android:textSize="14dp"
-                        android:fontFamily="sans-serif-light"
                         android:layout_alignBaseline="@+id/textView1"
                         android:layout_alignBottom="@+id/textView1"
-                        android:layout_alignParentEnd="true" />
+                        android:layout_alignParentEnd="true"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="right"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/textView1"
                         android:layout_width="125dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/gender"
-                        android:textSize="14dp"
-                        android:textColor="#474747"
                         android:layout_alignBottom="@+id/IV_genderSide"
-                        android:layout_toEndOf="@+id/IV_genderSide" />
+                        android:layout_toEndOf="@+id/IV_genderSide"
+                        android:text="@string/gender"
+                        android:textColor="#474747"
+                        android:textSize="14dp" />
 
                     <ImageView
+                        android:id="@+id/IV_genderSide"
                         android:layout_width="30dp"
                         android:layout_height="20dp"
-                        android:src="@drawable/icon_proview_gender"
-                        android:layout_marginLeft="17dp"
-                        android:id="@+id/IV_genderSide"
-                        android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
-                        android:layout_marginStart="17dp" />
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:src="@drawable/icon_proview_gender" />
                 </RelativeLayout>
 
                 <TextView
@@ -237,24 +235,24 @@
                     android:paddingRight="15dp" >
 
                     <ImageView
+                        android:id="@+id/IV_statusSide"
                         android:layout_width="30dp"
                         android:layout_height="20dp"
-                        android:src="@drawable/icon_proview_status"
-                        android:layout_marginLeft="17dp"
-                        android:id="@+id/IV_statusSide"
-                        android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
-                        android:layout_marginStart="17dp" />
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:src="@drawable/icon_proview_status" />
 
                     <TextView
                         android:id="@+id/textView11"
                         android:layout_width="125dp"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@+id/IV_statusSide"
                         android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/IV_statusSide"
                         android:text="@string/status"
-                        android:textSize="14dp"
-                        android:textColor="#474747" />
+                        android:textColor="#474747"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/TV_status"
@@ -264,9 +262,9 @@
                         android:layout_centerVertical="true"
                         android:layout_toRightOf="@+id/textView11"
                         android:drawablePadding="10dp"
+                        android:fontFamily="sans-serif-light"
                         android:gravity="right"
-                        android:textSize="14dp"
-                        android:fontFamily="sans-serif-light" />
+                        android:textSize="14dp" />
                 </RelativeLayout>
 
                 <TextView
@@ -285,14 +283,14 @@
                     android:paddingRight="15dp" >
 
                     <ImageView
+                        android:id="@+id/IV_ageSide"
                         android:layout_width="30dp"
                         android:layout_height="20dp"
-                        android:src="@drawable/icon_proview_age"
-                        android:layout_marginLeft="17dp"
-                        android:id="@+id/IV_ageSide"
-                        android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
-                        android:layout_marginStart="17dp" />
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:src="@drawable/icon_proview_age" />
 
                     <TextView
                         android:id="@+id/TV_age"
@@ -302,20 +300,20 @@
                         android:layout_centerVertical="true"
                         android:layout_toRightOf="@+id/textView4"
                         android:drawablePadding="10dp"
+                        android:fontFamily="sans-serif-light"
                         android:gravity="right"
-                        android:textSize="14dp"
-                        android:fontFamily="sans-serif-light" />
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="125dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/age"
-                        android:textSize="14dp"
-                        android:layout_toEndOf="@+id/IV_ageSide"
-                        android:textColor="#474747"
                         android:layout_alignBaseline="@+id/TV_age"
-                        android:layout_alignBottom="@+id/TV_age"/>
+                        android:layout_alignBottom="@+id/TV_age"
+                        android:layout_toEndOf="@+id/IV_ageSide"
+                        android:text="@string/age"
+                        android:textColor="#474747"
+                        android:textSize="14dp" />
                 </RelativeLayout>
 
                 <TextView
@@ -334,24 +332,24 @@
                     android:paddingRight="15dp" >
 
                     <ImageView
+                        android:id="@+id/IV_heightSide"
                         android:layout_width="30dp"
                         android:layout_height="20dp"
-                        android:src="@drawable/icon_proview_height"
-                        android:layout_marginLeft="17dp"
-                        android:id="@+id/IV_heightSide"
-                        android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
-                        android:layout_marginStart="17dp" />
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:src="@drawable/icon_proview_height" />
 
                     <TextView
                         android:id="@+id/textView12"
                         android:layout_width="125dp"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@+id/IV_heightSide"
                         android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/IV_heightSide"
                         android:text="@string/height"
-                        android:textSize="14dp"
-                        android:textColor="#474747" />
+                        android:textColor="#474747"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/TV_height"
@@ -361,9 +359,9 @@
                         android:layout_centerVertical="true"
                         android:layout_toRightOf="@+id/textView12"
                         android:drawablePadding="10dp"
+                        android:fontFamily="sans-serif-light"
                         android:gravity="right"
-                        android:textSize="14dp"
-                        android:fontFamily="sans-serif-light" />
+                        android:textSize="14dp" />
                 </RelativeLayout>
 
                 <TextView
@@ -382,24 +380,24 @@
                     android:paddingRight="15dp" >
 
                     <ImageView
+                        android:id="@+id/IV_lookingSide"
                         android:layout_width="30dp"
                         android:layout_height="20dp"
-                        android:src="@drawable/icon_proview_looking"
-                        android:layout_marginLeft="17dp"
-                        android:id="@+id/IV_lookingSide"
-                        android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
-                        android:layout_marginStart="17dp" />
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:src="@drawable/icon_proview_looking" />
 
                     <TextView
                         android:id="@+id/textView13"
                         android:layout_width="125dp"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@+id/IV_lookingSide"
                         android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/IV_lookingSide"
                         android:text="@string/looking_for"
-                        android:textSize="14dp"
-                        android:textColor="#474747" />
+                        android:textColor="#474747"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/TV_lookingFor"
@@ -409,9 +407,9 @@
                         android:layout_centerVertical="true"
                         android:layout_toRightOf="@+id/textView13"
                         android:drawablePadding="10dp"
+                        android:fontFamily="sans-serif-light"
                         android:gravity="right"
-                        android:textSize="14dp"
-                        android:fontFamily="sans-serif-light"/>
+                        android:textSize="14dp" />
                 </RelativeLayout>
 
                 <TextView
@@ -427,68 +425,68 @@
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/edit_profile_arrow_offwhite"
                     android:gravity="left|center"
-                    android:paddingRight="15dp"
-                    android:paddingLeft="15dp"
                     android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
                     android:paddingTop="12dp"
                     >
 
                     <RelativeLayout
+                        android:id="@+id/RL_aboutTop"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RL_aboutTop">
+                        android:layout_height="wrap_content">
 
                         <ImageView
+                            android:id="@+id/IV_aboutSide"
                             android:layout_width="30dp"
                             android:layout_height="20dp"
-                            android:src="@drawable/icon_proview_about"
                             android:layout_alignParentLeft="true"
-                            android:id="@+id/IV_aboutSide"/>
+                            android:src="@drawable/icon_proview_about" />
 
                         <TextView
                             android:id="@+id/textView33"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toEndOf="@+id/IV_aboutSide"
                             android:layout_centerVertical="true"
+                            android:layout_marginLeft="7dp"
+                            android:layout_toEndOf="@+id/IV_aboutSide"
                             android:text="@string/about_me"
-                            android:textSize="14dp"
                             android:textColor="#474747"
-                            android:layout_marginLeft="7dp"/>
+                            android:textSize="14dp" />
 
                         <ImageView
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:src="@mipmap/icon_arrow"
                             android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
                             android:layout_toEndOf="@+id/textView33"
-                            android:layout_marginStart="8dp" />
+                            android:src="@mipmap/icon_arrow" />
                     </RelativeLayout>
 
                     <LinearLayout
+                        android:id="@+id/LL_about"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:id="@+id/LL_about"
                         android:visibility="gone">
 
                         <TextView
                             android:layout_width="fill_parent"
                             android:layout_height="1dp"
-                            android:background="#c0c0c0"
+                            android:layout_marginBottom="5dp"
                             android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"/>
+                            android:background="#c0c0c0" />
 
                         <TextView
                             android:id="@+id/TV_aboutMe"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
-                            android:layout_marginLeft="34dp"
-                            android:textSize="12dp"
                             android:layout_below="@+id/RL_top"
                             android:layout_marginBottom="5dp"
-                            android:fontFamily="sans-serif-light"/>
+                            android:layout_marginLeft="34dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text=""
+                            android:textSize="12dp" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -506,68 +504,68 @@
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/edit_profile_arrow_offwhite"
                     android:gravity="left|center"
-                    android:paddingRight="15dp"
-                    android:paddingLeft="15dp"
                     android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
                     android:paddingTop="12dp"
                     >
 
                     <RelativeLayout
+                        android:id="@+id/RL_wantTop"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RL_wantTop">
+                        android:layout_height="wrap_content">
 
                         <ImageView
+                            android:id="@+id/IV_wantSide"
                             android:layout_width="30dp"
                             android:layout_height="20dp"
-                            android:src="@drawable/icon_proview_wanttomeet"
                             android:layout_alignParentLeft="true"
-                            android:id="@+id/IV_wantSide"/>
+                            android:src="@drawable/icon_proview_wanttomeet" />
 
                         <TextView
                             android:id="@+id/textViewWant"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toEndOf="@+id/IV_wantSide"
                             android:layout_centerVertical="true"
+                            android:layout_marginLeft="7dp"
+                            android:layout_toEndOf="@+id/IV_wantSide"
                             android:text="@string/want_to_meet"
-                            android:textSize="14dp"
                             android:textColor="#474747"
-                            android:layout_marginLeft="7dp"/>
+                            android:textSize="14dp" />
 
                         <ImageView
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:src="@mipmap/icon_arrow"
                             android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
                             android:layout_toEndOf="@+id/textViewWant"
-                            android:layout_marginStart="8dp" />
+                            android:src="@mipmap/icon_arrow" />
                     </RelativeLayout>
 
                     <LinearLayout
+                        android:id="@+id/LL_want"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:id="@+id/LL_want"
                         android:visibility="gone">
 
                         <TextView
                             android:layout_width="fill_parent"
                             android:layout_height="1dp"
-                            android:background="#c0c0c0"
+                            android:layout_marginBottom="5dp"
                             android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"/>
+                            android:background="#c0c0c0" />
 
                         <TextView
                             android:id="@+id/TV_wantToMeet"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
-                            android:layout_marginLeft="34dp"
-                            android:textSize="12dp"
                             android:layout_below="@+id/RL_top"
                             android:layout_marginBottom="5dp"
-                            android:fontFamily="sans-serif-light"/>
+                            android:layout_marginLeft="34dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text=""
+                            android:textSize="12dp" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

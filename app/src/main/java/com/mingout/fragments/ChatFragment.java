@@ -1,7 +1,5 @@
 package com.mingout.fragments;
 
-import org.jivesoftware.smack.packet.Message;
-
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -15,6 +13,8 @@ import android.widget.TextView;
 
 import com.mingout.activities.R;
 import com.mingout.util.Constants;
+
+import org.jivesoftware.smack.packet.Message;
 
 public class ChatFragment extends Fragment {
 

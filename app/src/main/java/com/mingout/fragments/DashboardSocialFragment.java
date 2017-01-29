@@ -1,10 +1,5 @@
 package com.mingout.fragments;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -18,7 +13,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -26,19 +20,20 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.mingout.activities.DashBoardActivity;
-import com.mingout.activities.ProfileGalleryActivity;
 import com.mingout.activities.ProviewActivity;
 import com.mingout.activities.R;
-import com.mingout.activities.ReviewItemDetailActivity;
 import com.mingout.dialog.MyAlertDialog;
 import com.mingout.models.FacebookDataModel;
 import com.mingout.models.QRscanLoginModel;
-import com.mingout.util.ConnectionTask;
 import com.mingout.util.ConnectionTaskSupportFragment;
 import com.mingout.util.Constants;
 import com.mingout.util.GPSHelper;
 import com.mingout.util.ResultJSON;
 import com.squareup.picasso.Picasso;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class DashboardSocialFragment extends Fragment implements ResultJSON {
 
@@ -163,7 +158,7 @@ public class DashboardSocialFragment extends Fragment implements ResultJSON {
 			if (!qrVerificationFlag) {
 				JSONObject jData = new JSONObject(string);
 				if (jData.getString("status_code").equals("1")) {
-					
+
 					Constants.USER_LAT = Lat;
 					Constants.USER_LONG = Long;
 
@@ -180,7 +175,7 @@ public class DashboardSocialFragment extends Fragment implements ResultJSON {
 					String json = gson.toJson(Qrobj);
 					editor.putString("QRModelObject", json);
 					editor.commit();
-					
+
 					Intent i = new Intent();
 					i.setClass(getActivity(), ProviewActivity.class);
 					i.putExtra("fragment flag", 2);

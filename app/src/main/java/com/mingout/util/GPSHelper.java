@@ -1,10 +1,10 @@
 package com.mingout.util;
 
-import java.util.List;
-
 import android.content.Context;
 import android.location.Location;
 import android.location.LocationManager;
+
+import java.util.List;
 
 public class GPSHelper {
 

@@ -1,7 +1,5 @@
 package com.mingout.fragments;
 
-import java.util.Locale;
-
 import android.app.Fragment;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -15,7 +13,6 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.mingout.activities.R;
 import com.mingout.dialog.ChatAgeFromDialog;
@@ -24,6 +21,8 @@ import com.mingout.dialog.ChatAgeToDialog;
 import com.mingout.dialog.ChatAgeToDialog.AgeToListner;
 import com.mingout.dialog.ChatGenderDialog;
 import com.mingout.dialog.ChatGenderDialog.GenderListner;
+
+import java.util.Locale;
 
 public class ChatSearchFragment extends Fragment implements GenderListner,
 		AgeFromListner, AgeToListner {
@@ -136,10 +135,6 @@ public class ChatSearchFragment extends Fragment implements GenderListner,
 		return view;
 	}
 
-	public interface RemoveChatSearchFragmentTriger {
-		public void RemoveChatSearchFragment();
-	}
-
 	@Override
 	public void setGender(String gender) {
 		// TODO Auto-generated method stub
@@ -169,20 +164,24 @@ public class ChatSearchFragment extends Fragment implements GenderListner,
 		this.parentFragment = fragment;
 	}
 
-	public interface ChatSearchListner {
-		public void searchUserListner(String name, String sex, String ageFrom,
-									  String ageTo);
-
-		public void stopRefreshListForSearch();
-
-		public void startRefreshListAgain();
-	}
-
 	@Override
 	public void onStart() {
 		// TODO Auto-generated method stub
 		super.onStart();
 		Log.e("Methord", "Start");
 		((ChatSearchListner) parentFragment).stopRefreshListForSearch();
+	}
+
+	public interface RemoveChatSearchFragmentTriger {
+		void RemoveChatSearchFragment();
+	}
+
+	public interface ChatSearchListner {
+		void searchUserListner(String name, String sex, String ageFrom,
+							   String ageTo);
+
+		void stopRefreshListForSearch();
+
+		void startRefreshListAgain();
 	}
 }

@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_matches_settings"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/dashboard_bg">
 
     <RelativeLayout
+        android:id="@+id/RL_title"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:paddingTop="5dp"
-        android:id="@+id/RL_title"
-        android:paddingBottom="5dp">
+        android:layout_alignParentTop="true"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
 
         <TextView
             android:id="@+id/TV_cancel"
@@ -33,8 +32,8 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:text="MingOut Matches Settings"
-            android:textSize="18dp"
-            android:textColor="#fff" />
+            android:textColor="#fff"
+            android:textSize="18dp" />
 
         <TextView
             android:id="@+id/TV_save"
@@ -53,9 +52,9 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:orientation="vertical"
         android:layout_below="@+id/RL_title"
-        android:background="#ffffff">
+        android:background="#ffffff"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/RR_sex"
@@ -69,34 +68,34 @@
                 android:id="@+id/TV_gender"
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
-                android:drawablePadding="10dp"
-                android:gravity="right"
-                android:textSize="16dp"
-                android:fontFamily="sans-serif-light"
                 android:layout_alignBaseline="@+id/textView1"
                 android:layout_alignBottom="@+id/textView1"
                 android:layout_alignParentEnd="true"
-                android:text="Male"/>
+                android:drawablePadding="10dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="right"
+                android:text="Male"
+                android:textSize="16dp" />
 
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
-                android:text="@string/gender"
-                android:textSize="16dp"
-                android:textColor="#474747"
                 android:layout_alignBottom="@+id/IV_genderSide"
-                android:layout_toEndOf="@+id/IV_genderSide" />
+                android:layout_toEndOf="@+id/IV_genderSide"
+                android:text="@string/gender"
+                android:textColor="#474747"
+                android:textSize="16dp" />
 
             <ImageView
+                android:id="@+id/IV_genderSide"
                 android:layout_width="30dp"
                 android:layout_height="20dp"
-                android:src="@drawable/icon_proview_gender"
-                android:layout_marginLeft="17dp"
-                android:id="@+id/IV_genderSide"
-                android:layout_centerVertical="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="17dp" />
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17dp"
+                android:layout_marginStart="17dp"
+                android:src="@drawable/icon_proview_gender" />
         </RelativeLayout>
 
         <TextView
@@ -115,63 +114,63 @@
             android:paddingRight="15dp" >
 
             <ImageView
+                android:id="@+id/IV_ageSide"
                 android:layout_width="30dp"
                 android:layout_height="20dp"
-                android:src="@drawable/icon_proview_age"
-                android:layout_marginLeft="17dp"
-                android:id="@+id/IV_ageSide"
-                android:layout_centerVertical="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="17dp" />
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17dp"
+                android:layout_marginStart="17dp"
+                android:src="@drawable/icon_proview_age" />
 
             <LinearLayout
+                android:id="@+id/LL_age"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:id="@+id/LL_age"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:layout_alignParentEnd="true" >
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/TV_fromAge"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:drawablePadding="10dp"
-                    android:gravity="center"
-                    android:textSize="14dp"
                     android:fontFamily="sans-serif-light"
-                    android:text="From" />
+                    android:gravity="center"
+                    android:text="From"
+                    android:textSize="14dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawablePadding="10dp"
-                    android:gravity="right"
-                    android:textSize="14dp"
                     android:fontFamily="sans-serif-light"
-                    android:text=" | " />
+                    android:gravity="right"
+                    android:text=" | "
+                    android:textSize="14dp" />
 
                 <TextView
                     android:id="@+id/TV_toAge"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:drawablePadding="10dp"
-                    android:gravity="center"
-                    android:textSize="14dp"
                     android:fontFamily="sans-serif-light"
-                    android:text="To" />
+                    android:gravity="center"
+                    android:text="To"
+                    android:textSize="14dp" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
-                android:text="@string/age"
-                android:textSize="16dp"
-                android:layout_toEndOf="@+id/IV_ageSide"
-                android:textColor="#474747"
                 android:layout_alignBaseline="@+id/LL_age"
-                android:layout_alignBottom="@+id/LL_age"/>
+                android:layout_alignBottom="@+id/LL_age"
+                android:layout_toEndOf="@+id/IV_ageSide"
+                android:text="@string/age"
+                android:textColor="#474747"
+                android:textSize="16dp" />
         </RelativeLayout>
 
         <TextView

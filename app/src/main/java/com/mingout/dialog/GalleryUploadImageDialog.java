@@ -72,9 +72,9 @@ public class GalleryUploadImageDialog extends Dialog implements
 	}
 
 	public interface onButtonClickListner {
-		public void onCameraButtonPressed();
+		void onCameraButtonPressed();
 
-		public void onGalleryButtonPressed();
+		void onGalleryButtonPressed();
 	}
 
 }

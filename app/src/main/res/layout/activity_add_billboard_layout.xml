@@ -73,28 +73,30 @@
                 android:layout_marginLeft="20dp">
 
                 <ImageView
+                    android:id="@+id/IV_subSide"
                     android:layout_width="25dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/billboard_subject_icon"
-                    android:id="@+id/IV_subSide"/>
+                    android:src="@drawable/billboard_subject_icon" />
 
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="17dp"
-                    android:text="Subject"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_centerVertical="true"
-                    android:layout_toEndOf="@+id/IV_subSide" />
+                    android:layout_marginLeft="17dp"
+                    android:layout_toEndOf="@+id/IV_subSide"
+                    android:text="Subject"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
             </RelativeLayout>
 
             <EditText
                 android:id="@+id/ET_subject"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/round_white_shape"
                 android:ems="10"
                 android:hint="Type here.."
@@ -102,12 +104,10 @@
                 android:inputType="text"
                 android:maxLines="1"
                 android:paddingBottom="7dp"
-                android:paddingTop="7dp"
                 android:paddingLeft="5dp"
+                android:paddingTop="7dp"
                 android:textColor="#b4bac8"
-                android:textSize="14dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp" />
+                android:textSize="14dp" />
 
             <RelativeLayout
                 android:id="@+id/RR_category"
@@ -116,134 +116,134 @@
                 android:layout_marginLeft="20dp">
 
                 <ImageView
+                    android:id="@+id/IV_catSide"
                     android:layout_width="25dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/billboard_category_icon"
                     android:layout_alignParentBottom="true"
-                    android:id="@+id/IV_catSide"/>
+                    android:src="@drawable/billboard_category_icon" />
 
                 <TextView
                     android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="17dp"
-                    android:text="Category"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_centerVertical="true"
-                    android:layout_toEndOf="@+id/IV_catSide" />
+                    android:layout_marginLeft="17dp"
+                    android:layout_toEndOf="@+id/IV_catSide"
+                    android:text="Category"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
             </RelativeLayout>
 
             <EditText
                 android:id="@+id/ET_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/round_white_shape"
                 android:ems="10"
-                android:paddingLeft="5dp"
                 android:hint="Type here.."
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:maxLines="1"
                 android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
                 android:paddingTop="7dp"
                 android:textColor="#b4bac8"
-                android:textSize="14dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp" />
+                android:textSize="14dp" />
 
 
             <RelativeLayout
                 android:id="@+id/RR_price"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
                 android:gravity="left|center"
-                android:paddingRight="15dp"
-                android:layout_marginLeft="20dp">
+                android:paddingRight="15dp">
 
                 <ImageView
+                    android:id="@+id/IV_priceSide"
                     android:layout_width="25dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/billboard_price_icon"
-                    android:id="@+id/IV_priceSide"/>
+                    android:src="@drawable/billboard_price_icon" />
 
                 <TextView
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="17dp"
-                    android:text="Price"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_centerVertical="true"
-                    android:layout_toEndOf="@+id/IV_priceSide" />
+                    android:layout_marginLeft="17dp"
+                    android:layout_toEndOf="@+id/IV_priceSide"
+                    android:text="Price"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
             </RelativeLayout>
 
             <EditText
                 android:id="@+id/ET_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/round_white_shape"
                 android:ems="10"
                 android:hint="Type here.."
                 android:imeOptions="actionNext"
                 android:inputType="text"
-                android:paddingLeft="5dp"
                 android:maxLines="1"
                 android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
                 android:paddingTop="7dp"
                 android:textColor="#b4bac8"
-                android:textSize="14dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp" />
+                android:textSize="14dp" />
 
 
             <RelativeLayout
                 android:id="@+id/RR_detail"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
                 android:gravity="left|center"
-                android:paddingRight="15dp"
-                android:layout_marginLeft="20dp">
+                android:paddingRight="15dp">
 
                 <ImageView
+                    android:id="@+id/IV_detailSide"
                     android:layout_width="25dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/billboard_detail_icon"
-                    android:id="@+id/IV_detailSide"/>
+                    android:src="@drawable/billboard_detail_icon" />
 
                 <TextView
                     android:id="@+id/textView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="17dp"
-                    android:text="Detail"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_centerVertical="true"
-                    android:layout_toEndOf="@+id/IV_detailSide" />
+                    android:layout_marginLeft="17dp"
+                    android:layout_toEndOf="@+id/IV_detailSide"
+                    android:text="Detail"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
             </RelativeLayout>
 
             <EditText
                 android:id="@+id/ET_detail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/round_white_shape"
                 android:ems="10"
                 android:hint="Type here.."
-                android:paddingLeft="5dp"
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:minLines="2"
                 android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
                 android:paddingTop="7dp"
                 android:textColor="#b4bac8"
-                android:textSize="14dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp" />
+                android:textSize="14dp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

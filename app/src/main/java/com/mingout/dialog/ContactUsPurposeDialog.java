@@ -1,10 +1,6 @@
 package com.mingout.dialog;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Dialog;
-import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +13,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.mingout.activities.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ContactUsPurposeDialog extends Dialog implements
 		View.OnClickListener {

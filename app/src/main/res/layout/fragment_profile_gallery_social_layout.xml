@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#fff">
 
     <RelativeLayout
@@ -9,66 +9,66 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:layout_marginTop="15dp">
+        android:layout_marginTop="15dp"
+        android:gravity="center">
 
         <LinearLayout
+            android:id="@+id/linearLayout4"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/IV_mainLogo"
             android:layout_marginTop="5dp"
-            android:layout_toLeftOf="@+id/linearLayout1"
-            android:id="@+id/linearLayout4">
+            android:layout_toLeftOf="@+id/linearLayout1">
 
             <com.mingout.util.RoundedImageView
                 android:id="@+id/IV_1"
                 android:layout_width="76dp"
                 android:layout_height="76dp"
                 android:src="@drawable/profile_gallery_main_img_bg"
-                app:riv_mutate_background="true"
-                app:riv_corner_radius="5dp"/>
+                app:riv_corner_radius="5dp"
+                app:riv_mutate_background="true" />
 
             <com.mingout.util.RoundedImageView
                 android:id="@+id/IV_2"
                 android:layout_width="76dp"
                 android:layout_height="76dp"
-                android:src="@drawable/profile_gallery_main_img_bg"
-                app:riv_mutate_background="true"
                 android:layout_marginLeft="5dp"
-                app:riv_corner_radius="5dp"/>
+                android:src="@drawable/profile_gallery_main_img_bg"
+                app:riv_corner_radius="5dp"
+                app:riv_mutate_background="true" />
 
             <com.mingout.util.RoundedImageView
                 android:id="@+id/IV_3"
                 android:layout_width="76dp"
                 android:layout_height="76dp"
-                android:src="@drawable/profile_gallery_main_img_bg"
-                app:riv_mutate_background="true"
                 android:layout_marginLeft="5dp"
-                app:riv_corner_radius="5dp"/>
+                android:src="@drawable/profile_gallery_main_img_bg"
+                app:riv_corner_radius="5dp"
+                app:riv_mutate_background="true" />
 
             <com.mingout.util.RoundedImageView
                 android:id="@+id/IV_4"
                 android:layout_width="76dp"
                 android:layout_height="76dp"
-                android:src="@drawable/profile_gallery_main_img_bg"
-                app:riv_mutate_background="true"
                 android:layout_marginLeft="5dp"
-                app:riv_corner_radius="5dp"/>
+                android:src="@drawable/profile_gallery_main_img_bg"
+                app:riv_corner_radius="5dp"
+                app:riv_mutate_background="true" />
         </LinearLayout>
 
         <com.mingout.util.RoundedImageView
             android:id="@+id/IV_mainLogo"
             android:layout_width="318dp"
             android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:background="#eeeeee"
-            app:riv_border_color="#e5e5e5"
-            app:riv_mutate_background="true"
-            app:riv_corner_radius="10dp"
-            app:riv_border_width="5dp"
             android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/linearLayout4" />
+            android:layout_alignStart="@+id/linearLayout4"
+            android:background="#eeeeee"
+            android:scaleType="centerCrop"
+            app:riv_border_color="#e5e5e5"
+            app:riv_border_width="5dp"
+            app:riv_corner_radius="10dp"
+            app:riv_mutate_background="true" />
     </RelativeLayout>
 
 </RelativeLayout>

@@ -1,5 +1,13 @@
 package com.mingout.util;
 
+import android.app.Activity;
+import android.app.Fragment;
+import android.app.ProgressDialog;
+import android.os.AsyncTask;
+import android.widget.Toast;
+
+import com.mingout.activities.R;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpVersion;
@@ -16,22 +24,13 @@ import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.ProgressDialog;
-import android.os.AsyncTask;
-import android.widget.Toast;
-
-import com.mingout.activities.R;
-
 public class ConnectionTask extends AsyncTask<String, String, Object> {
 
-	private Activity context;
-	private ProgressDialog progressDialog;
 	JSONObject obj;
 	Fragment f;
-
 	Boolean waitingDialog = true, fragFlag = false;
+	private Activity context;
+	private ProgressDialog progressDialog;
 
 	public ConnectionTask(Activity context, JSONObject obj) {
 		this.context = context;

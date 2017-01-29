@@ -1,5 +1,4 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
@@ -24,25 +23,25 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="190dp"
-                    android:src="@mipmap/dashboard_bg"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/dashboard_bg" />
 
                 <TextView
                     android:id="@+id/TV_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
                     android:text="Social Profile"
                     android:textColor="#fff"
-                    android:textSize="18dp"
-                    android:gravity="center"
-                    android:padding="5dp"/>
+                    android:textSize="18dp" />
 
                 <android.support.v4.view.ViewPager
                     android:id="@+id/viewPager"
                     android:layout_width="fill_parent"
                     android:layout_height="230dp"
-                    android:layout_below="@+id/TV_title"
-                    android:layout_alignParentStart="true">
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/TV_title">
                 </android.support.v4.view.ViewPager>
             </RelativeLayout>
 
@@ -65,37 +64,37 @@
                     android:id="@+id/IV_genderLogo"
                     android:layout_width="23dp"
                     android:layout_height="23dp"
-                    android:src="@drawable/d_male"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/d_male" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="20dp">
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp">
 
                 <LinearLayout
                     android:layout_width="120dp"
-                    android:background="@drawable/round_business_shape"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_business_shape">
 
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/business_icon"
-                        android:layout_marginLeft="10dp"/>
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/business_icon" />
 
                     <TextView
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center|left"
+                        android:layout_marginLeft="2dp"
                         android:text="Business"
                         android:textColor="#fff"
-                        android:textSize="14dp"
-                        android:layout_marginLeft="2dp"/>
+                        android:textSize="14dp" />
                 </LinearLayout>
 
 
@@ -116,69 +115,69 @@
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/edit_profile_arrow_offwhite"
                     android:gravity="left|center"
-                    android:paddingRight="15dp"
-                    android:paddingLeft="15dp"
                     android:orientation="vertical"
-                    android:paddingTop="12dp"
-                    android:paddingBottom="12dp">
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="12dp">
 
                     <RelativeLayout
+                        android:id="@+id/RL_phraseTop"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RL_phraseTop">
+                        android:layout_height="wrap_content">
 
                         <ImageView
+                            android:id="@+id/IV_phraseSide"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
-                            android:src="@drawable/icon_proview_phrase"
                             android:layout_alignParentLeft="true"
-                            android:id="@+id/IV_phraseSide"/>
+                            android:src="@drawable/icon_proview_phrase" />
 
                         <TextView
-                            android:layout_toEndOf="@+id/IV_phraseSide"
                             android:id="@+id/textView3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                             android:layout_centerVertical="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="7dp"
+                            android:layout_toEndOf="@+id/IV_phraseSide"
                             android:text="@string/my_phrase"
-                            android:textSize="14dp"
                             android:textColor="#474747"
-                            android:layout_marginLeft="7dp"/>
+                            android:textSize="14dp" />
 
                         <ImageView
+                            android:id="@+id/IV_showPhrase"
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:src="@mipmap/icon_arrow"
                             android:layout_centerVertical="true"
-                            android:layout_toEndOf="@+id/textView3"
                             android:layout_marginStart="10dp"
-                            android:id="@+id/IV_showPhrase" />
+                            android:layout_toEndOf="@+id/textView3"
+                            android:src="@mipmap/icon_arrow" />
                     </RelativeLayout>
 
                     <LinearLayout
+                        android:id="@+id/LL_phrase"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:id="@+id/LL_phrase"
                         android:visibility="gone">
 
                         <TextView
                             android:layout_width="fill_parent"
                             android:layout_height="1dp"
-                            android:background="#c0c0c0"
+                            android:layout_marginBottom="5dp"
                             android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"/>
+                            android:background="#c0c0c0" />
 
                         <TextView
                             android:id="@+id/TV_myPhrase"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
-                            android:layout_marginLeft="32dp"
-                            android:textSize="12dp"
                             android:layout_below="@+id/RL_top"
                             android:layout_marginBottom="5dp"
-                            android:fontFamily="sans-serif-light"/>
+                            android:layout_marginLeft="32dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text=""
+                            android:textSize="12dp" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -201,33 +200,33 @@
                         android:id="@+id/TV_gender"
                         android:layout_width="125dp"
                         android:layout_height="wrap_content"
-                        android:drawablePadding="10dp"
-                        android:gravity="right"
-                        android:textSize="14dp"
-                        android:fontFamily="sans-serif-light"
                         android:layout_alignBaseline="@+id/textView1"
                         android:layout_alignBottom="@+id/textView1"
-                        android:layout_alignParentEnd="true" />
+                        android:layout_alignParentEnd="true"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="right"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/textView1"
                         android:layout_width="125dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/gender"
-                        android:textSize="14dp"
-                        android:textColor="#474747"
                         android:layout_alignBottom="@+id/IV_genderSide"
-                        android:layout_toEndOf="@+id/IV_genderSide" />
+                        android:layout_toEndOf="@+id/IV_genderSide"
+                        android:text="@string/gender"
+                        android:textColor="#474747"
+                        android:textSize="14dp" />
 
                     <ImageView
+                        android:id="@+id/IV_genderSide"
                         android:layout_width="30dp"
                         android:layout_height="20dp"
-                        android:src="@drawable/icon_proview_gender"
-                        android:layout_marginLeft="17dp"
-                        android:id="@+id/IV_genderSide"
-                        android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
-                        android:layout_marginStart="17dp" />
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:src="@drawable/icon_proview_gender" />
                 </RelativeLayout>
 
                 <TextView
@@ -253,30 +252,30 @@
                         android:layout_centerVertical="true"
                         android:layout_toRightOf="@+id/textView4"
                         android:drawablePadding="10dp"
+                        android:fontFamily="sans-serif-light"
                         android:gravity="right"
-                        android:textSize="14dp"
-                        android:fontFamily="sans-serif-light" />
+                        android:textSize="14dp" />
 
                     <ImageView
+                        android:id="@+id/IV_ageSide"
                         android:layout_width="30dp"
                         android:layout_height="20dp"
-                        android:src="@drawable/icon_proview_age"
-                        android:layout_marginLeft="17dp"
-                        android:id="@+id/IV_ageSide"
-                        android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
-                        android:layout_marginStart="17dp" />
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:src="@drawable/icon_proview_age" />
 
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="125dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/age"
-                        android:textSize="14dp"
-                        android:textColor="#474747"
                         android:layout_alignBaseline="@+id/TV_age"
                         android:layout_alignBottom="@+id/TV_age"
-                        android:layout_toEndOf="@+id/IV_ageSide" />
+                        android:layout_toEndOf="@+id/IV_ageSide"
+                        android:text="@string/age"
+                        android:textColor="#474747"
+                        android:textSize="14dp" />
                 </RelativeLayout>
 
                 <TextView
@@ -295,24 +294,24 @@
                     android:paddingRight="15dp" >
 
                     <ImageView
+                        android:id="@+id/IV_jobSide"
                         android:layout_width="30dp"
                         android:layout_height="20dp"
-                        android:src="@drawable/icon_proview_jobtitle"
-                        android:layout_marginLeft="17dp"
-                        android:id="@+id/IV_jobSide"
-                        android:layout_centerVertical="true"
                         android:layout_alignParentStart="true"
-                        android:layout_marginStart="17dp" />
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:src="@drawable/icon_proview_jobtitle" />
 
                     <TextView
                         android:id="@+id/textView11"
                         android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="@string/job_title"
-                        android:textSize="14dp"
                         android:layout_toEndOf="@+id/IV_jobSide"
-                        android:textColor="#474747" />
+                        android:text="@string/job_title"
+                        android:textColor="#474747"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/TV_jobTitle"
@@ -322,9 +321,9 @@
                         android:layout_centerVertical="true"
                         android:layout_toRightOf="@+id/textView11"
                         android:drawablePadding="10dp"
+                        android:fontFamily="sans-serif-light"
                         android:gravity="right"
-                        android:textSize="14dp"
-                        android:fontFamily="sans-serif-light" />
+                        android:textSize="14dp" />
                 </RelativeLayout>
 
                 <TextView
@@ -340,68 +339,68 @@
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/edit_profile_arrow_offwhite"
                     android:gravity="left|center"
-                    android:paddingRight="15dp"
-                    android:paddingLeft="15dp"
                     android:orientation="vertical"
-                    android:paddingTop="12dp"
-                    android:paddingBottom="12dp">
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="12dp">
 
                     <RelativeLayout
+                        android:id="@+id/RL_companyTop"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RL_companyTop">
+                        android:layout_height="wrap_content">
 
                         <ImageView
+                            android:id="@+id/IV_companySide"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
-                            android:src="@drawable/icon_proview_company"
                             android:layout_alignParentLeft="true"
-                            android:id="@+id/IV_companySide"/>
+                            android:src="@drawable/icon_proview_company" />
 
                         <TextView
                             android:id="@+id/textView334"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toEndOf="@+id/IV_companySide"
                             android:layout_centerVertical="true"
+                            android:layout_marginLeft="7dp"
+                            android:layout_toEndOf="@+id/IV_companySide"
                             android:text="@string/company"
-                            android:textSize="14dp"
                             android:textColor="#474747"
-                            android:layout_marginLeft="7dp"/>
+                            android:textSize="14dp" />
 
                         <ImageView
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:src="@mipmap/icon_arrow"
                             android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
                             android:layout_toEndOf="@+id/textView334"
-                            android:layout_marginStart="8dp" />
+                            android:src="@mipmap/icon_arrow" />
                     </RelativeLayout>
 
                     <LinearLayout
+                        android:id="@+id/LL_company"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:id="@+id/LL_company"
                         android:visibility="gone">
 
                         <TextView
                             android:layout_width="fill_parent"
                             android:layout_height="1dp"
-                            android:background="#c0c0c0"
+                            android:layout_marginBottom="5dp"
                             android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"/>
+                            android:background="#c0c0c0" />
 
                         <TextView
                             android:id="@+id/TV_company"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
-                            android:layout_marginLeft="32dp"
-                            android:textSize="12dp"
                             android:layout_below="@+id/RL_top"
                             android:layout_marginBottom="5dp"
-                            android:fontFamily="sans-serif-light"/>
+                            android:layout_marginLeft="32dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text=""
+                            android:textSize="12dp" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -418,68 +417,68 @@
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/edit_profile_arrow_offwhite"
                     android:gravity="left|center"
-                    android:paddingRight="15dp"
-                    android:paddingLeft="15dp"
                     android:orientation="vertical"
-                    android:paddingTop="12dp"
-                    android:paddingBottom="12dp">
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="12dp">
 
                     <RelativeLayout
+                        android:id="@+id/RL_biographyTop"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/RL_biographyTop">
+                        android:layout_height="wrap_content">
 
                         <ImageView
+                            android:id="@+id/IV_bioSide"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
-                            android:src="@drawable/icon_proview_bipgraphy"
                             android:layout_alignParentLeft="true"
-                            android:id="@+id/IV_bioSide"/>
+                            android:src="@drawable/icon_proview_bipgraphy" />
 
                         <TextView
                             android:id="@+id/textView33"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toEndOf="@+id/IV_bioSide"
                             android:layout_centerVertical="true"
-                            android:text="@string/biography"
-                            android:textSize="14dp"
                             android:layout_marginLeft="7dp"
-                            android:textColor="#474747" />
+                            android:layout_toEndOf="@+id/IV_bioSide"
+                            android:text="@string/biography"
+                            android:textColor="#474747"
+                            android:textSize="14dp" />
 
                         <ImageView
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:src="@mipmap/icon_arrow"
                             android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
                             android:layout_toEndOf="@+id/textView33"
-                            android:layout_marginStart="8dp" />
+                            android:src="@mipmap/icon_arrow" />
                     </RelativeLayout>
 
                     <LinearLayout
+                        android:id="@+id/LL_biography"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:id="@+id/LL_biography"
                         android:visibility="gone">
 
                         <TextView
                             android:layout_width="fill_parent"
                             android:layout_height="1dp"
-                            android:background="#c0c0c0"
+                            android:layout_marginBottom="5dp"
                             android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"/>
+                            android:background="#c0c0c0" />
 
                         <TextView
                             android:id="@+id/TV_biography"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
-                            android:layout_marginLeft="32dp"
-                            android:textSize="12dp"
                             android:layout_below="@+id/RL_top"
                             android:layout_marginBottom="5dp"
-                            android:fontFamily="sans-serif-light"/>
+                            android:layout_marginLeft="32dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text=""
+                            android:textSize="12dp" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

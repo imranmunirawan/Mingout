@@ -20,9 +20,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView1"
+                android:buttonTint="#ffffff"
                 android:gravity="right|center"
                 android:text="Single"
-                android:buttonTint="#ffffff"
                 android:textColor="#ffffff"
                 android:textSize="16dp"/>
 
@@ -31,48 +31,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView1"
+                android:layout_marginTop="5dp"
+                android:buttonTint="#ffffff"
                 android:gravity="right|center"
                 android:text="In Relationship"
                 android:textColor="#ffffff"
-                android:buttonTint="#ffffff"
-                android:textSize="16dp"
-                android:layout_marginTop="5dp"/>
+                android:textSize="16dp" />
 
             <RadioButton
                 android:id="@+id/RB_married"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView1"
+                android:layout_marginTop="5dp"
+                android:buttonTint="#ffffff"
                 android:gravity="right|center"
                 android:text="Married"
                 android:textColor="#ffffff"
-                android:buttonTint="#ffffff"
-                android:textSize="16dp"
-                android:layout_marginTop="5dp"/>
+                android:textSize="16dp" />
 
             <RadioButton
                 android:id="@+id/RB_divorced"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView1"
+                android:layout_marginTop="5dp"
+                android:buttonTint="#ffffff"
                 android:gravity="right|center"
                 android:text="Divorced"
                 android:textColor="#ffffff"
-                android:buttonTint="#ffffff"
-                android:textSize="16dp"
-                android:layout_marginTop="5dp"/>
+                android:textSize="16dp" />
 
             <RadioButton
                 android:id="@+id/RB_widow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView1"
+                android:layout_marginTop="5dp"
+                android:buttonTint="#ffffff"
                 android:gravity="right|center"
                 android:text="Widow/er"
                 android:textColor="#ffffff"
-                android:buttonTint="#ffffff"
-                android:textSize="16dp"
-                android:layout_marginTop="5dp"/>
+                android:textSize="16dp" />
         </RadioGroup>
     </LinearLayout>
 </RelativeLayout>

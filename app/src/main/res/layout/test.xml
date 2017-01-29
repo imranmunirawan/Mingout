@@ -39,8 +39,8 @@
             android:layout_below="@+id/ratingBar1"
             android:layout_marginTop="5dp"
             android:text="Food Quality :"
-            android:textSize="14dp"
-            android:textColor="#444" />
+            android:textColor="#444"
+            android:textSize="14dp" />
 
         <TextView
             android:id="@+id/TV_label2"
@@ -50,8 +50,8 @@
             android:layout_below="@+id/TV_label1"
             android:layout_marginTop="5dp"
             android:text="Service Quality:"
-            android:textSize="14dp"
-            android:textColor="#444" />
+            android:textColor="#444"
+            android:textSize="14dp" />
 
         <TextView
             android:id="@+id/TV_type"

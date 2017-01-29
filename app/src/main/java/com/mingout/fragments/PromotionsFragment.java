@@ -1,8 +1,5 @@
 package com.mingout.fragments;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Fragment;
 import android.content.Intent;
 import android.graphics.Color;
@@ -27,6 +24,9 @@ import com.mingout.util.ConnectionTask;
 import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;
 import com.squareup.picasso.Picasso;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class PromotionsFragment extends Fragment implements ResultJSON {
 	WebView WV_text;

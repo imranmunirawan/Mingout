@@ -1,10 +1,5 @@
 package com.mingout.util;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -22,16 +17,20 @@ import org.apache.http.protocol.BasicHttpContext;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 public class HttpManager {
 
 	DefaultHttpClient httpClient;
 	HttpContext httpContext;
-	private String ret;
-
 	HttpResponse response;
 	HttpPost httpPost;
 	String webServiceUrl;
 	HttpParams httpParams;
+	private String ret;
 
 	public HttpManager(String serviceName) {
 		HttpParams params = new BasicHttpParams();

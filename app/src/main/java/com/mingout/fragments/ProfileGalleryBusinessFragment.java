@@ -1,10 +1,5 @@
 package com.mingout.fragments;
 
-import java.io.IOException;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.content.ActivityNotFoundException;
 import android.content.ClipData;
 import android.content.Intent;
@@ -16,7 +11,6 @@ import android.graphics.Matrix;
 import android.graphics.drawable.ColorDrawable;
 import android.media.ExifInterface;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.provider.Settings;
@@ -45,6 +39,9 @@ import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;
 import com.mingout.util.Utilities;
 import com.squareup.picasso.Picasso;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class ProfileGalleryBusinessFragment extends Fragment implements
 		onButtonClickListner, ResultJSON, onDeleteClickListner {
@@ -488,10 +485,6 @@ public class ProfileGalleryBusinessFragment extends Fragment implements
 		startActivityForResult(intent, PICK_IMAGE);
 	}
 
-	public interface RefreshBusinessDataListner {
-		public void refreshBusinessData();
-	}
-
 	@Override
 	public void UpdateResult(Object obj) {
 		// TODO Auto-generated method stub
@@ -614,5 +607,9 @@ public class ProfileGalleryBusinessFragment extends Fragment implements
 					Toast.LENGTH_SHORT);
 			toast.show();
 		}
+	}
+
+	public interface RefreshBusinessDataListner {
+		void refreshBusinessData();
 	}
 }

@@ -31,8 +31,7 @@ public class RegistrationAgeDialog extends Dialog implements
 
 		Bok = (Button) findViewById(R.id.B_ok);
 		datePicker1 = (DatePicker) findViewById(R.id.datePicker1);
-		
-		
+
 
 		Bok.setOnClickListener(this);
 	}
@@ -53,6 +52,6 @@ public class RegistrationAgeDialog extends Dialog implements
 	}
 
 	public interface DialogAgeListener {
-		public void AgeListner(String age);
+		void AgeListner(String age);
 	}
 }

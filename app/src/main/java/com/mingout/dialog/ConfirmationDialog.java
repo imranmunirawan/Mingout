@@ -1,7 +1,5 @@
 package com.mingout.dialog;
 
-import com.mingout.activities.R;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.os.Bundle;
@@ -9,6 +7,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.mingout.activities.R;
 
 public class ConfirmationDialog extends Dialog implements
 		View.OnClickListener {
@@ -57,7 +57,7 @@ public class ConfirmationDialog extends Dialog implements
 	}
 
 	public interface ConfirmationDialogListner {
-		public void confirmationDialogYesButtonPressed();
+		void confirmationDialogYesButtonPressed();
 	}
 
 }

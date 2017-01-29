@@ -3,39 +3,25 @@ package com.mingout.adapters;
 /**
  * Created by Adnan Imtiaz on 10/29/2016.
  */
- import android.content.Context;
- import android.support.v7.widget.RecyclerView;
- import android.view.LayoutInflater;
- import android.view.View;
- import android.view.ViewGroup;
- import android.widget.ImageView;
- import android.widget.TextView;
- import android.widget.Toast;
 
- import com.mingout.activities.MatchesActivity;
- import com.mingout.activities.R;
- import com.mingout.models.ChatRoomUserListModel;
- import com.mingout.models.MatchesSubModel;
- import com.squareup.picasso.Picasso;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
- import java.util.List;
+import com.mingout.activities.MatchesActivity;
+import com.mingout.activities.R;
+import com.mingout.models.ChatRoomUserListModel;
+import com.squareup.picasso.Picasso;
+
+import java.util.List;
 
 public class MatchesSubAdapter extends RecyclerView.Adapter<MatchesSubAdapter.MyViewHolder> {
 
     private List<ChatRoomUserListModel> subMatchesList;
     private MatchesActivity matchesActivity;
-
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView TV_title;
-        public ImageView IV_main;
-
-        public MyViewHolder(View view) {
-            super(view);
-            TV_title = (TextView) view.findViewById(R.id.TV_title);
-            IV_main = (ImageView) view.findViewById(R.id.IV_main);
-        }
-    }
-
 
     public MatchesSubAdapter(List<ChatRoomUserListModel> moviesList, MatchesActivity matchesActivity) {
         this.subMatchesList = moviesList;
@@ -80,5 +66,16 @@ public class MatchesSubAdapter extends RecyclerView.Adapter<MatchesSubAdapter.My
     @Override
     public int getItemCount() {
         return subMatchesList.size();
+    }
+
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+        public TextView TV_title;
+        public ImageView IV_main;
+
+        public MyViewHolder(View view) {
+            super(view);
+            TV_title = (TextView) view.findViewById(R.id.TV_title);
+            IV_main = (ImageView) view.findViewById(R.id.IV_main);
+        }
     }
 }

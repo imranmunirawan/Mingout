@@ -1,9 +1,9 @@
 package com.mingout.util;
 
+import android.app.Fragment;
+
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import android.app.Fragment;
 
 public class UpdateProfileData {
 

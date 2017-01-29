@@ -1,10 +1,5 @@
 package com.mingout.fragments;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import org.json.JSONObject;
-
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;
@@ -13,11 +8,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.Toast;
+
 import com.mingout.activities.EditBusinessSocialDataActivity.OnSaveButtonPressListner;
 import com.mingout.activities.R;
 import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;
 import com.mingout.util.UpdateProfileData;
+
+import org.json.JSONObject;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class EditDataAgeFragment extends Fragment implements
 		OnSaveButtonPressListner, ResultJSON {
@@ -73,7 +75,7 @@ public class EditDataAgeFragment extends Fragment implements
 			String string = (String) obj;
 			JSONObject jData = new JSONObject(string);
 			if (jData.getString("status_code").equals("1")) {
-				JSONObject jResponse = (JSONObject) jData
+				JSONObject jResponse = jData
 						.getJSONObject("response");
 				Toast.makeText(getActivity(), "Age has been updated!",
 						Toast.LENGTH_SHORT).show();

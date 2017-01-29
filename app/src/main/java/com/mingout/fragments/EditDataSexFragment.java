@@ -1,7 +1,5 @@
 package com.mingout.fragments;
 
-import org.json.JSONObject;
-
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,6 +13,8 @@ import com.mingout.activities.R;
 import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;
 import com.mingout.util.UpdateProfileData;
+
+import org.json.JSONObject;
 
 public class EditDataSexFragment extends Fragment implements
 		OnSaveButtonPressListner, ResultJSON {
@@ -62,7 +62,7 @@ public class EditDataSexFragment extends Fragment implements
 			String string = (String) obj;
 			JSONObject jData = new JSONObject(string);
 			if (jData.getString("status_code").equals("1")) {
-				JSONObject jResponse = (JSONObject) jData
+				JSONObject jResponse = jData
 						.getJSONObject("response");
 				Toast.makeText(getActivity(), "Gender has been updated!",
 						Toast.LENGTH_SHORT).show();

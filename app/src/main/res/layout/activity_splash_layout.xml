@@ -9,22 +9,22 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/splash_bg"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:src="@mipmap/splash_bg" />
 
     <ImageView
+        android:id="@+id/IV_centerBg"
         android:layout_width="wrap_content"
         android:layout_height="460dp"
-        android:src="@mipmap/splash_center_bg"
-        android:id="@+id/IV_centerBg"
-        android:layout_centerVertical="true"/>
+        android:layout_centerVertical="true"
+        android:src="@mipmap/splash_center_bg" />
 
     <ImageView
+        android:id="@+id/IV_logo"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:src="@mipmap/splash_logo"
-        android:id="@+id/IV_logo"
+        android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:src="@mipmap/splash_logo" />
 
 </RelativeLayout>

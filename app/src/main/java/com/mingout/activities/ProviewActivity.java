@@ -1,17 +1,5 @@
 package com.mingout.activities;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-
-import org.jivesoftware.smack.PacketListener;
-import org.jivesoftware.smack.filter.MessageTypeFilter;
-import org.jivesoftware.smack.filter.PacketFilter;
-import org.jivesoftware.smack.packet.Message;
-import org.jivesoftware.smack.packet.Packet;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -46,7 +34,6 @@ import com.mingout.chatModule.ConnectServer.ServerNewMessageListner;
 import com.mingout.dialog.ConfirmationDialog;
 import com.mingout.dialog.ConfirmationDialog.ConfirmationDialogListner;
 import com.mingout.dialog.MyAlertDialog;
-import com.mingout.dialog.PreviewMoreDialog;
 import com.mingout.fragments.ChatFragment;
 import com.mingout.fragments.ChatSearchFragment.RemoveChatSearchFragmentTriger;
 import com.mingout.fragments.MenuContactUsActivity;
@@ -54,12 +41,23 @@ import com.mingout.fragments.MenuHelpActivity;
 import com.mingout.fragments.PreviewProfileListFragment;
 import com.mingout.fragments.PromotionsFragment;
 import com.mingout.models.ChatModel;
-import com.mingout.models.QRscanLoginModel;
 import com.mingout.util.ConnectionTask;
 import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;
 import com.mingout.util.Utilities;
 import com.squareup.picasso.Picasso;
+
+import org.jivesoftware.smack.PacketListener;
+import org.jivesoftware.smack.filter.MessageTypeFilter;
+import org.jivesoftware.smack.filter.PacketFilter;
+import org.jivesoftware.smack.packet.Message;
+import org.jivesoftware.smack.packet.Packet;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
 
 public class ProviewActivity extends Activity implements RemoveChatSearchFragmentTriger, ResultJSON,
 		ConfirmationDialogListner, ServerNewMessageListner, ConnectedToServer {
@@ -468,8 +466,8 @@ public class ProviewActivity extends Activity implements RemoveChatSearchFragmen
 				}
 
 			} else {
-				JSONObject jResponse = (JSONObject) jData.getJSONObject("response");
-				Constants.SESSION_TOKEN = jResponse.getString("session_token");
+                JSONObject jResponse = jData.getJSONObject("response");
+                Constants.SESSION_TOKEN = jResponse.getString("session_token");
 
 			}
 		} catch (Exception e) {

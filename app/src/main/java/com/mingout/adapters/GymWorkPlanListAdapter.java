@@ -1,24 +1,20 @@
 package com.mingout.adapters;
 
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mingout.activities.GymWorkPlanEditActivity;
-import com.mingout.activities.GymWorkoutPlanDevicesEditActivity;
 import com.mingout.activities.R;
-import com.mingout.activities.WorkoutPlanDescriptionActivity;
-import com.mingout.models.WorkOutDevicesModel;
 import com.mingout.models.workoutPlanModel;
+
+import java.util.List;
 
 public class GymWorkPlanListAdapter extends BaseAdapter {
 
@@ -44,7 +40,7 @@ public class GymWorkPlanListAdapter extends BaseAdapter {
 	public View getView(final int position, View row, ViewGroup parent) {
 		// TODO Auto-generated method stub
 		if (row == null) {
-			LayoutInflater inflater = ((Activity) context).getLayoutInflater();
+			LayoutInflater inflater = context.getLayoutInflater();
 			row = inflater.inflate(LayoutId, parent, false);
 		}
 		final workoutPlanModel objj = productList.get(position);

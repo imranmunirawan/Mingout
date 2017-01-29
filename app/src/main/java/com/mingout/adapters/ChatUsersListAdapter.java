@@ -1,9 +1,5 @@
 package com.mingout.adapters;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
@@ -21,13 +17,17 @@ import com.mingout.models.ChatRoomUserListModel;
 import com.mingout.util.Constants;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+
 public class ChatUsersListAdapter extends BaseAdapter {
 
 	Activity context;
 	List<ChatRoomUserListModel> productList;
-	private ArrayList<ChatRoomUserListModel> arraylist;
 	int LayoutId;
 	Fragment f;
+	private ArrayList<ChatRoomUserListModel> arraylist;
 
 	public ChatUsersListAdapter(Activity contex, int layoutId,
 			List<ChatRoomUserListModel> vIEW_Productss_LIST, Fragment f) {
@@ -61,7 +61,7 @@ public class ChatUsersListAdapter extends BaseAdapter {
 	public View getView(final int position, View row, ViewGroup parent) {
 		// TODO Auto-generated method stub
 		if (row == null) {
-			LayoutInflater inflater = ((Activity) context).getLayoutInflater();
+			LayoutInflater inflater = context.getLayoutInflater();
 			row = inflater.inflate(LayoutId, parent, false);
 		}
 		ChatRoomUserListModel obj = productList.get(position);

@@ -1,6 +1,17 @@
 package com.mingout.activities;
-import org.json.JSONException;
-import org.json.JSONObject;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.Toast;
+
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -16,26 +27,17 @@ import com.mingout.models.FacebookDataModel;
 import com.mingout.util.ConnectionTask;
 import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;
-import android.app.Activity;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.net.http.LoggingEventHandler;
-import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.util.Log;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
-import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 @SuppressWarnings("ALL")
 public class MainActivity extends Activity implements ResultJSON, DialogAgeListener {
 
+    private static String APP_ID = String.valueOf(R.string.facebook_app_id);
     String responseJson, userDOB = null, tag = "com.mingout.activities.MainActivity";
     FacebookDataModel facebookDataObj;
     SharedPreferences mPrefs;
-    private static String APP_ID = String.valueOf(R.string.facebook_app_id);
     boolean singinFlag = false;
     LoginButton loginButton;
     CallbackManager callbackManager;

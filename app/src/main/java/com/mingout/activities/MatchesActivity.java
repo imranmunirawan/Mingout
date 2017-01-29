@@ -11,20 +11,15 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mingout.adapters.ChatUsersListAdapter;
 import com.mingout.adapters.MatchesSubAdapter;
-import com.mingout.fragments.ChatUsersListFragment;
 import com.mingout.fragments.MatchesFragment;
 import com.mingout.models.ChatRoomUserListModel;
 import com.mingout.models.MatchesSubModel;
 import com.mingout.util.ConnectionTask;
 import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;
-import com.mingout.util.Utilities;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,13 +29,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MatchesActivity extends FragmentActivity implements ResultJSON {
+    public static ViewPager viewPager;
     ImageView IV_settings;
+    ImageView IMG_matchRight, IMG_matchLeft;
+    MyAdapter matchesAdapter;
     private List<MatchesSubModel> subMatchesList = new ArrayList<>();
     private RecyclerView recyclerView;
     private MatchesSubAdapter mAdapter;
-    public static ViewPager viewPager;
-    ImageView IMG_matchRight, IMG_matchLeft;
-    MyAdapter matchesAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,35 +110,6 @@ public class MatchesActivity extends FragmentActivity implements ResultJSON {
         return viewPager.getCurrentItem() + i;
     }
 
-    class MyAdapter extends FragmentPagerAdapter {
-        public MyAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public MatchesFragment getItem(int position) {
-            if (Constants.fragments != null) {
-                return Constants.fragments.get(position);
-            } else {
-                return null;
-            }
-        }
-
-        @Override
-        public int getCount() {
-            return Constants.fragments.size();
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            if (Constants.fragments != null) {
-                return Constants.fragments.get(position).getitle();
-            } else {
-                return null;
-            }
-        }
-    }
-
     @Override
     public void UpdateResult(Object obj) {
         ArrayList<ChatRoomUserListModel> Cache_Users_list = new ArrayList<ChatRoomUserListModel>();
@@ -206,6 +172,35 @@ public class MatchesActivity extends FragmentActivity implements ResultJSON {
 
         matchesAdapter = new MyAdapter(getSupportFragmentManager());
         viewPager.setAdapter(matchesAdapter);
+    }
+
+    class MyAdapter extends FragmentPagerAdapter {
+        public MyAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public MatchesFragment getItem(int position) {
+            if (Constants.fragments != null) {
+                return Constants.fragments.get(position);
+            } else {
+                return null;
+            }
+        }
+
+        @Override
+        public int getCount() {
+            return Constants.fragments.size();
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            if (Constants.fragments != null) {
+                return Constants.fragments.get(position).getitle();
+            } else {
+                return null;
+            }
+        }
     }
 
 }

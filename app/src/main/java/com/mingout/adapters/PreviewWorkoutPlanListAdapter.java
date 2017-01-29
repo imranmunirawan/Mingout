@@ -1,7 +1,5 @@
 package com.mingout.adapters;
 
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -16,6 +14,8 @@ import com.mingout.activities.GymWorkoutPlanDevicesEditActivity;
 import com.mingout.activities.R;
 import com.mingout.activities.WorkoutPlanDescriptionActivity;
 import com.mingout.models.WorkOutDevicesModel;
+
+import java.util.List;
 
 public class PreviewWorkoutPlanListAdapter extends
 		ArrayAdapter<WorkOutDevicesModel> {
@@ -43,7 +43,7 @@ public class PreviewWorkoutPlanListAdapter extends
 	public View getView(final int position, View row, ViewGroup parent) {
 		// TODO Auto-generated method stub
 		if (row == null) {
-			LayoutInflater inflater = ((Activity) context).getLayoutInflater();
+			LayoutInflater inflater = context.getLayoutInflater();
 			row = inflater.inflate(LayoutId, parent, false);
 		}
 		final WorkOutDevicesModel objj = productList.get(position);

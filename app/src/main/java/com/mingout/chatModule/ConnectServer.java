@@ -1,26 +1,20 @@
 package com.mingout.chatModule;
 
-import org.jivesoftware.smack.ConnectionConfiguration;
-import org.jivesoftware.smack.XMPPConnection;
+import android.app.Activity;
+import android.util.Log;
+
+import com.mingout.util.Constants;
+import com.mingout.util.Utilities;
+
 import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smack.packet.Message;
 import org.jivesoftware.smack.packet.Presence;
-
-import android.app.Activity;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.util.Log;
-import android.widget.Toast;
-
-import com.mingout.dialog.MyAlertDialog;
-import com.mingout.util.Constants;
-import com.mingout.util.Utilities;
 
 public class ConnectServer {
 
     String HOST = "chatserver.mingout.com";
     int PORT = 5222;
-    String USERNAME, PASSWORD, myChatUserName;;
+    String USERNAME, PASSWORD, myChatUserName;
     String service = "chatserver.mingout.com";
     // XMPPConnection connection;
     Activity context;
@@ -111,14 +105,14 @@ public class ConnectServer {
     }
 
     public interface ReconnectServerListner {
-        public void reconnectServerSucessfully();
+        void reconnectServerSucessfully();
     }
 
     public interface ServerNewMessageListner {
-        public void newMessageListner(Message message);
+        void newMessageListner(Message message);
     }
 
     public interface ConnectedToServer {
-        public void connectToServer();
+        void connectToServer();
     }
 }

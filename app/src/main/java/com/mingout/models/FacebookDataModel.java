@@ -42,16 +42,16 @@ public class FacebookDataModel implements Serializable {
 		return gender;
 	}
 
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
 	public String getDob() {
 		return dob;
 	}
 
 	public void setDob(String dob) {
 		this.dob = dob;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
 	}
 
 }

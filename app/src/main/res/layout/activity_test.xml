@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_test"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,134 +10,134 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
         <ImageView
+            android:id="@+id/IV_navBackground"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/IV_navBackground"
             android:background="#fff8f1"/>
 
         <RelativeLayout
+            android:id="@+id/relativeLayout3"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:id="@+id/relativeLayout3"
             android:padding="10dp">
 
             <com.mingout.util.RoundedImageView
                 android:id="@+id/IV_NavLogo"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
                 android:scaleType="centerCrop"
                 app:riv_border_color="#894c10"
-                app:riv_mutate_background="true"
-                app:riv_oval="true"
                 app:riv_border_width="4dp"
-                android:padding="5dp"
-                android:layout_centerVertical="true"
-                android:layout_alignParentStart="true" />
+                app:riv_mutate_background="true"
+                app:riv_oval="true" />
 
             <TextView
-                android:text="--"
+                android:id="@+id/TV_NavName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toEndOf="@+id/IV_NavLogo"
-                android:id="@+id/TV_NavName"
-                android:textSize="22dp"
-                android:textColor="#ff7900"
                 android:layout_marginLeft="13dp"
-                android:fontFamily="sans-serif-light"/>
+                android:layout_toEndOf="@+id/IV_NavLogo"
+                android:fontFamily="sans-serif-light"
+                android:text="--"
+                android:textColor="#ff7900"
+                android:textSize="22dp" />
 
 
         </RelativeLayout>
 
         <RelativeLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
+            android:layout_below="@+id/relativeLayout3"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/relativeLayout3">
+            android:orientation="vertical">
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:id="@+id/linearLayout3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:weightSum="2"
                 android:layout_marginBottom="10dp"
-                android:id="@+id/linearLayout3">
+                android:orientation="horizontal"
+                android:weightSum="2">
 
                 <RelativeLayout
+                    android:id="@+id/RL_settings"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:padding="7dp"
-                    android:id="@+id/RL_settings"
-                    android:layout_weight="1">
+                    android:padding="7dp">
 
                     <ImageView
                         android:id="@+id/IV_settings"
                         android:layout_width="34dp"
                         android:layout_height="34dp"
-                        android:src="@mipmap/dashboard_icon_settings"
                         android:layout_alignParentTop="true"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginBottom="5dp"/>
+                        android:layout_marginBottom="5dp"
+                        android:src="@mipmap/dashboard_icon_settings" />
 
                     <TextView
+                        android:id="@+id/TV_settings"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="16dp"
-                        android:text="SETTINGS"
-                        android:id="@+id/TV_settings"
-                        android:layout_gravity="center_horizontal"
-                        android:textColor="#ff7900"
                         android:layout_below="@+id/IV_settings"
-                        android:layout_centerHorizontal="true" />
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:text="SETTINGS"
+                        android:textColor="#ff7900"
+                        android:textSize="16dp" />
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/RL_logout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:padding="7dp"
-                    android:id="@+id/RL_logout"
-                    android:layout_weight="1">
+                    android:padding="7dp">
 
                     <ImageView
                         android:id="@+id/IV_logout"
                         android:layout_width="34dp"
                         android:layout_height="34dp"
-                        android:src="@mipmap/dashboard_icon_logout"
                         android:layout_alignParentTop="true"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginBottom="5dp"/>
+                        android:layout_marginBottom="5dp"
+                        android:src="@mipmap/dashboard_icon_logout" />
 
                     <TextView
+                        android:id="@+id/TV_logout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="16dp"
-                        android:text="LOG OUT"
-                        android:id="@+id/TV_logout"
-                        android:layout_gravity="center_horizontal"
-                        android:textColor="#ff7900"
                         android:layout_below="@+id/IV_logout"
-                        android:layout_centerHorizontal="true" />
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:text="LOG OUT"
+                        android:textColor="#ff7900"
+                        android:textSize="16dp" />
                 </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_alignParentTop="true"
+                android:layout_above="@+id/linearLayout3"
                 android:layout_alignParentEnd="true"
-                android:layout_above="@+id/linearLayout3">
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="40dp"
+                android:orientation="vertical">
 
                 <ScrollView
                     android:layout_width="match_parent"
@@ -158,31 +158,31 @@
                                 android:id="@+id/IV_profile"
                                 android:layout_width="22dp"
                                 android:layout_height="22dp"
-                                android:src="@mipmap/dashboard_nav_promotions"
-                                android:layout_margin="8dp"/>
+                                android:layout_margin="8dp"
+                                android:src="@mipmap/dashboard_nav_promotions" />
 
                             <TextView
+                                android:id="@+id/TV_navPromotions"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textSize="16dp"
-                                android:text="Promotions"
-                                android:id="@+id/TV_navPromotions"
-                                android:layout_gravity="center_horizontal"
-                                android:textColor="#ff7900"
-                                android:layout_marginLeft="8dp"
                                 android:layout_centerVertical="true"
-                                android:layout_toRightOf="@+id/IV_profile"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="8dp"
                                 android:layout_toEndOf="@+id/IV_profile"
-                                android:padding="8dp"/>
+                                android:layout_toRightOf="@+id/IV_profile"
+                                android:padding="8dp"
+                                android:text="Promotions"
+                                android:textColor="#ff7900"
+                                android:textSize="16dp" />
 
                             <TextView
+                                android:id="@+id/TV_homeBottom"
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
-                                android:layout_toRightOf="@+id/IV_profile"
-                                android:background="#ffb878"
-                                android:layout_marginLeft="8dp"
                                 android:layout_below="@+id/TV_navPromotions"
-                                android:id="@+id/TV_homeBottom"/>
+                                android:layout_marginLeft="8dp"
+                                android:layout_toRightOf="@+id/IV_profile"
+                                android:background="#ffb878" />
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -194,32 +194,32 @@
                                 android:id="@+id/IV_updateProfile"
                                 android:layout_width="22dp"
                                 android:layout_height="22dp"
-                                android:src="@mipmap/dashboard_nav_chat"
-                                android:layout_margin="8dp"/>
+                                android:layout_margin="8dp"
+                                android:src="@mipmap/dashboard_nav_chat" />
 
                             <TextView
+                                android:id="@+id/TV_navChat"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textSize="16dp"
-                                android:text="Chat"
-                                android:id="@+id/TV_navChat"
-                                android:layout_gravity="center_horizontal"
-                                android:textColor="#ff7900"
-                                android:layout_marginLeft="8dp"
                                 android:layout_centerVertical="true"
-                                android:layout_toRightOf="@+id/IV_updateProfile"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="8dp"
                                 android:layout_toEndOf="@+id/IV_updateProfile"
+                                android:layout_toRightOf="@+id/IV_updateProfile"
                                 android:drawableBottom="@android:color/black"
-                                android:padding="8dp"/>
+                                android:padding="8dp"
+                                android:text="Chat"
+                                android:textColor="#ff7900"
+                                android:textSize="16dp" />
 
                             <TextView
+                                android:id="@+id/TV_updateProfileSide"
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
-                                android:layout_toRightOf="@+id/IV_updateProfile"
-                                android:background="#ffb878"
-                                android:layout_marginLeft="8dp"
                                 android:layout_below="@+id/TV_navChat"
-                                android:id="@+id/TV_updateProfileSide"/>
+                                android:layout_marginLeft="8dp"
+                                android:layout_toRightOf="@+id/IV_updateProfile"
+                                android:background="#ffb878" />
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -231,32 +231,32 @@
                                 android:id="@+id/IV_updatePhotos"
                                 android:layout_width="22dp"
                                 android:layout_height="22dp"
-                                android:src="@mipmap/dashboard_nav_chat_history"
-                                android:layout_margin="8dp"/>
+                                android:layout_margin="8dp"
+                                android:src="@mipmap/dashboard_nav_chat_history" />
 
                             <TextView
+                                android:id="@+id/TV_navChatHistory"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textSize="16dp"
-                                android:text="Chat History"
-                                android:id="@+id/TV_navChatHistory"
-                                android:layout_gravity="center_horizontal"
-                                android:textColor="#ff7900"
-                                android:layout_marginLeft="8dp"
                                 android:layout_centerVertical="true"
-                                android:layout_toRightOf="@+id/IV_updatePhotos"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="8dp"
                                 android:layout_toEndOf="@+id/IV_updatePhotos"
+                                android:layout_toRightOf="@+id/IV_updatePhotos"
                                 android:drawableBottom="@android:color/black"
-                                android:padding="8dp"/>
+                                android:padding="8dp"
+                                android:text="Chat History"
+                                android:textColor="#ff7900"
+                                android:textSize="16dp" />
 
                             <TextView
+                                android:id="@+id/TV_updatePhotosSide"
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
-                                android:layout_toRightOf="@+id/IV_updatePhotos"
-                                android:background="#ffb878"
-                                android:layout_marginLeft="8dp"
                                 android:layout_below="@+id/TV_navChatHistory"
-                                android:id="@+id/TV_updatePhotosSide"/>
+                                android:layout_marginLeft="8dp"
+                                android:layout_toRightOf="@+id/IV_updatePhotos"
+                                android:background="#ffb878" />
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -268,31 +268,31 @@
                                 android:id="@+id/IV_reviews"
                                 android:layout_width="22dp"
                                 android:layout_height="22dp"
-                                android:src="@mipmap/dashboard_nav_reviews"
-                                android:layout_margin="8dp"/>
+                                android:layout_margin="8dp"
+                                android:src="@mipmap/dashboard_nav_reviews" />
 
                             <TextView
+                                android:id="@+id/TV_navReviews"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textSize="16dp"
-                                android:text="Ratting &amp; Reviews"
-                                android:id="@+id/TV_navReviews"
-                                android:layout_gravity="center_horizontal"
-                                android:textColor="#ff7900"
-                                android:layout_marginLeft="8dp"
                                 android:layout_centerVertical="true"
-                                android:layout_toRightOf="@+id/IV_reviews"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="8dp"
                                 android:layout_toEndOf="@+id/IV_reviews"
+                                android:layout_toRightOf="@+id/IV_reviews"
                                 android:drawableBottom="@android:color/black"
-                                android:padding="8dp"/>
+                                android:padding="8dp"
+                                android:text="Ratting &amp; Reviews"
+                                android:textColor="#ff7900"
+                                android:textSize="16dp" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
-                                android:layout_toRightOf="@+id/IV_reviews"
-                                android:background="#ffb878"
+                                android:layout_below="@+id/TV_navReviews"
                                 android:layout_marginLeft="8dp"
-                                android:layout_below="@+id/TV_navReviews"/>
+                                android:layout_toRightOf="@+id/IV_reviews"
+                                android:background="#ffb878" />
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -304,32 +304,32 @@
                                 android:id="@+id/IV_billBoard"
                                 android:layout_width="22dp"
                                 android:layout_height="22dp"
-                                android:src="@mipmap/dashboard_nav_billboard"
-                                android:layout_margin="8dp"/>
+                                android:layout_margin="8dp"
+                                android:src="@mipmap/dashboard_nav_billboard" />
 
                             <TextView
+                                android:id="@+id/TV_navBillBoard"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textSize="16dp"
-                                android:text="Bill Board"
-                                android:id="@+id/TV_navBillBoard"
-                                android:layout_gravity="center_horizontal"
-                                android:textColor="#ff7900"
-                                android:layout_marginLeft="8dp"
                                 android:layout_centerVertical="true"
-                                android:layout_toRightOf="@+id/IV_billBoard"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="8dp"
                                 android:layout_toEndOf="@+id/IV_billBoard"
+                                android:layout_toRightOf="@+id/IV_billBoard"
                                 android:drawableBottom="@android:color/black"
-                                android:padding="8dp"/>
+                                android:padding="8dp"
+                                android:text="Bill Board"
+                                android:textColor="#ff7900"
+                                android:textSize="16dp" />
 
                             <TextView
+                                android:id="@+id/TV_billBoardSide"
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
-                                android:layout_toRightOf="@+id/IV_billBoard"
-                                android:background="#ffb878"
-                                android:layout_marginLeft="8dp"
                                 android:layout_below="@+id/TV_navBillBoard"
-                                android:id="@+id/TV_billBoardSide"/>
+                                android:layout_marginLeft="8dp"
+                                android:layout_toRightOf="@+id/IV_billBoard"
+                                android:background="#ffb878" />
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -341,32 +341,32 @@
                                 android:id="@+id/IV_facebookStatus"
                                 android:layout_width="22dp"
                                 android:layout_height="22dp"
-                                android:src="@mipmap/dashboard_nav_post_fb"
-                                android:layout_margin="8dp"/>
+                                android:layout_margin="8dp"
+                                android:src="@mipmap/dashboard_nav_post_fb" />
 
                             <TextView
+                                android:id="@+id/TV_navFacebookStatus"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textSize="16dp"
-                                android:text="Post Statistic FB"
-                                android:id="@+id/TV_navFacebookStatus"
-                                android:layout_gravity="center_horizontal"
-                                android:textColor="#ff7900"
-                                android:layout_marginLeft="8dp"
                                 android:layout_centerVertical="true"
-                                android:layout_toRightOf="@+id/IV_facebookStatus"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="8dp"
                                 android:layout_toEndOf="@+id/IV_facebookStatus"
+                                android:layout_toRightOf="@+id/IV_facebookStatus"
                                 android:drawableBottom="@android:color/black"
-                                android:padding="8dp"/>
+                                android:padding="8dp"
+                                android:text="Post Statistic FB"
+                                android:textColor="#ff7900"
+                                android:textSize="16dp" />
 
                             <TextView
+                                android:id="@+id/TV_facebookStatusSide"
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
-                                android:layout_toRightOf="@+id/IV_facebookStatus"
-                                android:background="#ffb878"
-                                android:layout_marginLeft="8dp"
                                 android:layout_below="@+id/TV_navFacebookStatus"
-                                android:id="@+id/TV_facebookStatusSide"/>
+                                android:layout_marginLeft="8dp"
+                                android:layout_toRightOf="@+id/IV_facebookStatus"
+                                android:background="#ffb878" />
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -375,37 +375,37 @@
                             android:paddingLeft="7dp">
 
                             <TextView
+                                android:id="@+id/TV_navContactUs"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textSize="16dp"
-                                android:text="Contact Us"
-                                android:id="@+id/TV_navContactUs"
-                                android:layout_gravity="center_horizontal"
-                                android:textColor="#ff7900"
-                                android:layout_marginLeft="8dp"
                                 android:layout_centerVertical="true"
-                                android:layout_toRightOf="@+id/IV_contactUs"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="8dp"
                                 android:layout_toEndOf="@+id/IV_contactUs"
+                                android:layout_toRightOf="@+id/IV_contactUs"
                                 android:drawableBottom="@android:color/black"
-                                android:padding="8dp"/>
+                                android:padding="8dp"
+                                android:text="Contact Us"
+                                android:textColor="#ff7900"
+                                android:textSize="16dp" />
 
                             <ImageView
                                 android:id="@+id/IV_contactUs"
                                 android:layout_width="22dp"
                                 android:layout_height="22dp"
-                                android:src="@mipmap/dashboard_icon_contact_us"
-                                android:layout_alignParentTop="true"
                                 android:layout_alignParentStart="true"
-                                android:layout_margin="8dp"/>
+                                android:layout_alignParentTop="true"
+                                android:layout_margin="8dp"
+                                android:src="@mipmap/dashboard_icon_contact_us" />
 
                             <TextView
+                                android:id="@+id/TV_contactUsSide"
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
-                                android:layout_toRightOf="@+id/IV_contactUs"
-                                android:background="#ffb878"
-                                android:layout_marginLeft="8dp"
                                 android:layout_below="@+id/TV_navContactUs"
-                                android:id="@+id/TV_contactUsSide"/>
+                                android:layout_marginLeft="8dp"
+                                android:layout_toRightOf="@+id/IV_contactUs"
+                                android:background="#ffb878" />
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -414,28 +414,28 @@
                             android:paddingLeft="7dp">
 
                             <TextView
+                                android:id="@+id/TV_navHelp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textSize="16dp"
-                                android:text="Help"
-                                android:id="@+id/TV_navHelp"
-                                android:layout_gravity="center_horizontal"
-                                android:textColor="#ff7900"
-                                android:layout_marginLeft="8dp"
                                 android:layout_centerVertical="true"
-                                android:layout_toRightOf="@+id/IV_help"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="8dp"
                                 android:layout_toEndOf="@+id/IV_help"
+                                android:layout_toRightOf="@+id/IV_help"
                                 android:drawableBottom="@android:color/black"
-                                android:padding="8dp"/>
+                                android:padding="8dp"
+                                android:text="Help"
+                                android:textColor="#ff7900"
+                                android:textSize="16dp" />
 
                             <ImageView
                                 android:id="@+id/IV_help"
                                 android:layout_width="22dp"
                                 android:layout_height="22dp"
-                                android:src="@mipmap/dashboard_icon_help"
-                                android:layout_alignParentTop="true"
                                 android:layout_alignParentStart="true"
-                                android:layout_margin="8dp"/>
+                                android:layout_alignParentTop="true"
+                                android:layout_margin="8dp"
+                                android:src="@mipmap/dashboard_icon_help" />
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -446,26 +446,26 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textSize="16dp"
-                                android:text="ADD ONS"
-                                android:layout_gravity="center_horizontal"
-                                android:textColor="#ff7900"
-                                android:layout_marginLeft="8dp"
                                 android:layout_centerVertical="true"
-                                android:layout_toRightOf="@+id/IV_addOn"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="8dp"
                                 android:layout_toEndOf="@+id/IV_addOn"
+                                android:layout_toRightOf="@+id/IV_addOn"
                                 android:drawableBottom="@android:color/black"
                                 android:padding="8dp"
+                                android:text="ADD ONS"
+                                android:textColor="#ff7900"
+                                android:textSize="16dp"
                                 android:textStyle="bold"/>
 
                             <ImageView
                                 android:id="@+id/IV_addOn"
                                 android:layout_width="22dp"
                                 android:layout_height="22dp"
-                                android:src="@mipmap/dashboard_icon_help"
-                                android:layout_alignParentTop="true"
                                 android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
                                 android:layout_margin="8dp"
+                                android:src="@mipmap/dashboard_icon_help"
                                 android:visibility="invisible"/>
                         </RelativeLayout>
 
@@ -478,31 +478,31 @@
                                 android:id="@+id/IV_gym"
                                 android:layout_width="22dp"
                                 android:layout_height="22dp"
-                                android:src="@mipmap/dashboard_nav_gym"
-                                android:layout_margin="8dp"/>
+                                android:layout_margin="8dp"
+                                android:src="@mipmap/dashboard_nav_gym" />
 
                             <TextView
+                                android:id="@+id/TV_gym"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textSize="16dp"
-                                android:text="MingOut Gym"
-                                android:id="@+id/TV_gym"
-                                android:layout_gravity="center_horizontal"
-                                android:textColor="#ff7900"
-                                android:layout_marginLeft="8dp"
                                 android:layout_centerVertical="true"
-                                android:layout_toRightOf="@+id/IV_gym"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="8dp"
                                 android:layout_toEndOf="@+id/IV_gym"
+                                android:layout_toRightOf="@+id/IV_gym"
                                 android:drawableBottom="@android:color/black"
-                                android:padding="8dp"/>
+                                android:padding="8dp"
+                                android:text="MingOut Gym"
+                                android:textColor="#ff7900"
+                                android:textSize="16dp" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
-                                android:layout_toRightOf="@+id/IV_gym"
-                                android:background="#ffb878"
+                                android:layout_below="@+id/TV_gym"
                                 android:layout_marginLeft="8dp"
-                                android:layout_below="@+id/TV_gym"/>
+                                android:layout_toRightOf="@+id/IV_gym"
+                                android:background="#ffb878" />
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -514,31 +514,31 @@
                                 android:id="@+id/IV_loyalty"
                                 android:layout_width="22dp"
                                 android:layout_height="22dp"
-                                android:src="@mipmap/dashboard_nav_loyalty"
-                                android:layout_margin="8dp"/>
+                                android:layout_margin="8dp"
+                                android:src="@mipmap/dashboard_nav_loyalty" />
 
                             <TextView
+                                android:id="@+id/TV_loyalty"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textSize="16dp"
-                                android:text="MingOut Loyalty"
-                                android:id="@+id/TV_loyalty"
-                                android:layout_gravity="center_horizontal"
-                                android:textColor="#ff7900"
-                                android:layout_marginLeft="8dp"
                                 android:layout_centerVertical="true"
-                                android:layout_toRightOf="@+id/IV_loyalty"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="8dp"
                                 android:layout_toEndOf="@+id/IV_loyalty"
+                                android:layout_toRightOf="@+id/IV_loyalty"
                                 android:drawableBottom="@android:color/black"
-                                android:padding="8dp"/>
+                                android:padding="8dp"
+                                android:text="MingOut Loyalty"
+                                android:textColor="#ff7900"
+                                android:textSize="16dp" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
-                                android:layout_toRightOf="@+id/IV_loyalty"
-                                android:background="#ffb878"
+                                android:layout_below="@+id/TV_loyalty"
                                 android:layout_marginLeft="8dp"
-                                android:layout_below="@+id/TV_loyalty"/>
+                                android:layout_toRightOf="@+id/IV_loyalty"
+                                android:background="#ffb878" />
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -550,31 +550,31 @@
                                 android:id="@+id/IV_matches"
                                 android:layout_width="22dp"
                                 android:layout_height="22dp"
-                                android:src="@mipmap/dashboard_nav_matches"
-                                android:layout_margin="8dp"/>
+                                android:layout_margin="8dp"
+                                android:src="@mipmap/dashboard_nav_matches" />
 
                             <TextView
+                                android:id="@+id/TV_match"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textSize="16dp"
-                                android:text="MingOut Match"
-                                android:id="@+id/TV_match"
-                                android:layout_gravity="center_horizontal"
-                                android:textColor="#ff7900"
-                                android:layout_marginLeft="8dp"
                                 android:layout_centerVertical="true"
-                                android:layout_toRightOf="@+id/IV_matches"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="8dp"
                                 android:layout_toEndOf="@+id/IV_matches"
+                                android:layout_toRightOf="@+id/IV_matches"
                                 android:drawableBottom="@android:color/black"
-                                android:padding="8dp"/>
+                                android:padding="8dp"
+                                android:text="MingOut Match"
+                                android:textColor="#ff7900"
+                                android:textSize="16dp" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
-                                android:layout_toRightOf="@+id/IV_matches"
-                                android:background="#ffb878"
+                                android:layout_below="@+id/TV_match"
                                 android:layout_marginLeft="8dp"
-                                android:layout_below="@+id/TV_match"/>
+                                android:layout_toRightOf="@+id/IV_matches"
+                                android:background="#ffb878" />
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -586,23 +586,23 @@
                                 android:id="@+id/IV_album"
                                 android:layout_width="22dp"
                                 android:layout_height="22dp"
-                                android:src="@mipmap/dashboard_nav_album"
-                                android:layout_margin="8dp"/>
+                                android:layout_margin="8dp"
+                                android:src="@mipmap/dashboard_nav_album" />
 
                             <TextView
+                                android:id="@+id/TV_album"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textSize="16dp"
-                                android:text="MingOut Album"
-                                android:id="@+id/TV_album"
-                                android:layout_gravity="center_horizontal"
-                                android:textColor="#ff7900"
-                                android:layout_marginLeft="8dp"
                                 android:layout_centerVertical="true"
-                                android:layout_toRightOf="@+id/IV_album"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="8dp"
                                 android:layout_toEndOf="@+id/IV_album"
+                                android:layout_toRightOf="@+id/IV_album"
                                 android:drawableBottom="@android:color/black"
-                                android:padding="8dp"/>
+                                android:padding="8dp"
+                                android:text="MingOut Album"
+                                android:textColor="#ff7900"
+                                android:textSize="16dp" />
                         </RelativeLayout>
                     </LinearLayout>
                 </ScrollView>

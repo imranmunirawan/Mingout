@@ -1,10 +1,5 @@
 package com.mingout.fragments;
 
-import java.io.IOException;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.content.ActivityNotFoundException;
 import android.content.ClipData;
 import android.content.Intent;
@@ -16,12 +11,10 @@ import android.graphics.Matrix;
 import android.graphics.drawable.ColorDrawable;
 import android.media.ExifInterface;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.DragEvent;
 import android.view.LayoutInflater;
@@ -40,13 +33,15 @@ import com.mingout.dialog.GalleryDeleteImageDialog.onDeleteClickListner;
 import com.mingout.dialog.GalleryUploadImageDialog;
 import com.mingout.dialog.GalleryUploadImageDialog.onButtonClickListner;
 import com.mingout.dialog.MyAlertDialog;
-import com.mingout.dialog.RegistrationAgeDialog;
 import com.mingout.models.GalleryModel;
 import com.mingout.util.ConnectionTaskSupportFragment;
 import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;
 import com.mingout.util.Utilities;
 import com.squareup.picasso.Picasso;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class ProfileGallerySocialFragment extends Fragment implements
 		onButtonClickListner, ResultJSON, onDeleteClickListner {
@@ -500,10 +495,6 @@ public class ProfileGallerySocialFragment extends Fragment implements
 		startActivityForResult(intent, PICK_IMAGE);
 	}
 
-	public interface RefreshDataListner {
-		public void refreshData();
-	}
-
 	@Override
 	public void UpdateResult(Object obj) {
 		// TODO Auto-generated method stub
@@ -612,6 +603,10 @@ public class ProfileGallerySocialFragment extends Fragment implements
 					Toast.LENGTH_SHORT);
 			toast.show();
 		}
+	}
+
+	public interface RefreshDataListner {
+		void refreshData();
 	}
 
 }

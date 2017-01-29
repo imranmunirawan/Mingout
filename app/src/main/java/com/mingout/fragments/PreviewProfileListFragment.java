@@ -1,11 +1,5 @@
 package com.mingout.fragments;
 
-import java.util.ArrayList;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Fragment;
 import android.content.Intent;
 import android.graphics.Color;
@@ -19,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mingout.activities.PreviewRattingActivity;
@@ -30,6 +23,12 @@ import com.mingout.models.PreviewProfileModel;
 import com.mingout.util.ConnectionTask;
 import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class PreviewProfileListFragment extends Fragment implements ResultJSON {
 	ListView lv;

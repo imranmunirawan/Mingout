@@ -34,14 +34,14 @@
             android:visibility="invisible" />
 
         <LinearLayout
+            android:id="@+id/LL_type"
             android:layout_width="100dp"
             android:layout_height="25dp"
-            android:background="@drawable/round_social_shape"
             android:layout_below="@+id/TV_name"
             android:layout_marginTop="5dp"
             android:layout_toLeftOf="@+id/imageView2"
-            android:gravity="center"
-            android:id="@+id/LL_type">
+            android:background="@drawable/round_social_shape"
+            android:gravity="center">
 
             <ImageView
                 android:layout_width="30dp"
@@ -53,10 +53,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|left"
+                android:layout_marginLeft="2dp"
                 android:text="Social"
                 android:textColor="#fff"
-                android:textSize="14dp"
-                android:layout_marginLeft="2dp"/>
+                android:textSize="14dp" />
         </LinearLayout>
 
         <TextView

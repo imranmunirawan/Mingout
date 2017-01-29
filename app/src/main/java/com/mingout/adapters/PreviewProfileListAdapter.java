@@ -1,7 +1,5 @@
 package com.mingout.adapters;
 
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -20,6 +18,8 @@ import com.mingout.models.PreviewProfileModel;
 import com.mingout.util.Constants;
 import com.mingout.util.RoundedImageView;
 import com.squareup.picasso.Picasso;
+
+import java.util.List;
 
 public class PreviewProfileListAdapter extends
 		ArrayAdapter<PreviewProfileModel> {
@@ -46,7 +46,7 @@ public class PreviewProfileListAdapter extends
 	public View getView(final int position, View row, ViewGroup parent) {
 		// TODO Auto-generated method stub
 		if (row == null) {
-			LayoutInflater inflater = ((Activity) context).getLayoutInflater();
+			LayoutInflater inflater = context.getLayoutInflater();
 			row = inflater.inflate(LayoutId, parent, false);
 		}
 		PreviewProfileModel objj = productList.get(position);

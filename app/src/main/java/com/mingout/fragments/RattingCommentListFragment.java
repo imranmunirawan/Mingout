@@ -1,11 +1,5 @@
 package com.mingout.fragments;
 
-import java.util.ArrayList;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,11 +12,16 @@ import android.widget.Toast;
 
 import com.mingout.activities.R;
 import com.mingout.adapters.PreviewRattingCommentListAdapter;
-import com.mingout.models.PreviewProfileModel;
 import com.mingout.models.PreviewRattingCommentModel;
 import com.mingout.util.ConnectionTask;
 import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class RattingCommentListFragment extends Fragment implements ResultJSON {
 

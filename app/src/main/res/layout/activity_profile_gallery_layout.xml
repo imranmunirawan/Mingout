@@ -1,9 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:background="@mipmap/dashboard_bg"
     android:orientation="vertical"
-    android:weightSum="2"
-    android:background="@mipmap/dashboard_bg">
+    android:weightSum="2">
 
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -23,20 +23,20 @@
             android:gravity="center" >
 
             <ImageView
+                android:id="@+id/IV_social"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src="@drawable/icon_social"
-                android:id="@+id/IV_social"/>
+                android:src="@drawable/icon_social" />
 
             <Button
                 android:id="@+id/B_social"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
+                android:fontFamily="sans-serif-light"
                 android:text="@string/social"
                 android:textColor="#7f8080"
-                android:textSize="15dp"
-                android:fontFamily="sans-serif-light" />
+                android:textSize="15dp" />
         </LinearLayout>
 
         <TextView
@@ -52,29 +52,29 @@
             android:gravity="center" >
 
             <ImageView
+                android:id="@+id/IV_business"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src="@drawable/icon_business"
-                android:id="@+id/IV_business"/>
+                android:src="@drawable/icon_business" />
             <Button
                 android:id="@+id/B_business"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:drawablePadding="3dp"
+                android:fontFamily="sans-serif-light"
                 android:text="@string/business"
                 android:textColor="#7f8080"
-                android:textSize="15dp"
-                android:fontFamily="sans-serif-light"/>
+                android:textSize="15dp" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#e5e5e5"
         android:gravity="center"
-        android:weightSum="2"
-        android:background="#e5e5e5">
+        android:weightSum="2">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -112,15 +112,13 @@
         </RelativeLayout>
     </LinearLayout>
 
-    <android.support.v4.view.ViewPager
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/viewPager"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/linearLayout1"
-        android:layout_weight="1.9" >
+        android:layout_weight="1.9">
     </android.support.v4.view.ViewPager>
 
 </LinearLayout>

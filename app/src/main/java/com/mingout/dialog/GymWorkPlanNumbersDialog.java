@@ -1,8 +1,5 @@
 package com.mingout.dialog;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
@@ -16,6 +13,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.mingout.activities.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GymWorkPlanNumbersDialog extends Dialog implements
 		View.OnClickListener {

@@ -9,11 +9,9 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,7 +25,6 @@ import com.mingout.activities.MainActivity;
 import com.mingout.activities.MenuSettingsActivity;
 import com.mingout.activities.R;
 import com.mingout.dialog.ConfirmationDialog;
-
 import com.mingout.models.FacebookDataModel;
 import com.mingout.models.ReviewBusinessDataModel;
 import com.mingout.models.ReviewSocialDataModel;
@@ -43,33 +40,28 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.InputStream;
-import java.io.Serializable;
 import java.net.URL;
 
-import static com.facebook.FacebookSdk.getApplicationContext;
-
 public class MenuFragment extends Fragment implements FragmentManager.OnBackStackChangedListener, ResultJSON, ConfirmationDialog.ConfirmationDialogListner {
+	public static TextView TV_title, TV_home, TV_updateProfile, TV_updatePhotos, TV_contactUs, TV_help, TV_nameDetail;
+	public static ImageView IV_home, IV_updateProfile, IV_updatePhotos, IV_contactUs, IV_help;
 	DashboardBusinessFragment businessFrag;
 	DashboardSocialFragment socialFrag;
 	String s_name, s_age, b_name, b_age;
 	View rootView;
 	SharedPreferences mPrefs;
-	public static TextView TV_title, TV_home, TV_updateProfile, TV_updatePhotos, TV_contactUs, TV_help, TV_nameDetail;
 	ImageView IV_menu, IV_logout, IV_settings, IV_logo;
-	public static ImageView IV_home, IV_updateProfile, IV_updatePhotos, IV_contactUs,	IV_help;
 
 	//  private ListView listView;
 	//  private ArrayList<SlidingMenuItem> listMenuItems;
 	//  private final static String TAG = "MenuFragment";
-
 	FacebookDataModel fbModel;
 
 	int fragmentFlag, newProfileDetailFlag;
 	String selectedApi, profileId;
-	private ReviewSocialDataModel facebookDataObj;
-
-	private Bundle b;
 	boolean logoutFlag = false;
+	private ReviewSocialDataModel facebookDataObj;
+	private Bundle b;
 
 	public static Fragment newInstance() {
 		return new MenuFragment();
@@ -300,10 +292,10 @@ public class MenuFragment extends Fragment implements FragmentManager.OnBackStac
 			JSONObject jData = new JSONObject(string);
 			Log.e("Response :", string);
 			if (jData.getString("status_code").equals("1")) {
-				JSONObject jResponse = (JSONObject) jData.getJSONObject("response");
+				JSONObject jResponse = jData.getJSONObject("response");
 				if (logoutFlag != true) {
 					try {
-						JSONObject jBusiness = (JSONObject) jResponse.getJSONObject("business_profile");
+						JSONObject jBusiness = jResponse.getJSONObject("business_profile");
 
 						Constants.PROFILE_ID_BUSINESS = jBusiness.getString("profile_id");
 
@@ -344,7 +336,7 @@ public class MenuFragment extends Fragment implements FragmentManager.OnBackStac
 					}
 
 					try {
-						JSONObject jSocial = (JSONObject) jResponse.getJSONObject("social_profile");
+						JSONObject jSocial = jResponse.getJSONObject("social_profile");
 
 						Constants.PROFILE_ID_SOCIAL = jSocial.getString("profile_id");
 
@@ -382,7 +374,7 @@ public class MenuFragment extends Fragment implements FragmentManager.OnBackStac
 						//Constants.SOCIAL_AGE = String.valueOf(Utilities.getAgeFromDOB(jSocial.getString("dob")));
 						//Constants.SOCIAL_DOB = jSocial.getString("dob");
 
-						b.putSerializable("socialreview data", (Serializable) socialModel);
+						b.putSerializable("socialreview data", socialModel);
 					} catch (Exception e) {
 						Log.e("Social Exception :", e.toString());
 					}
@@ -450,6 +442,22 @@ public class MenuFragment extends Fragment implements FragmentManager.OnBackStac
 //		}
 //	}
 
+	public void uploadImage(String profileId, String base64Image) {
+		JSONObject jsonobj;
+		jsonobj = new JSONObject();
+		try {
+			jsonobj.put("appkey", "spiderman1450@gmail.com");
+			jsonobj.put("profile_id", profileId);
+			jsonobj.put("session_token", Constants.SESSION_TOKEN);
+			jsonobj.put("user_id", Constants.USER_ID);
+			jsonobj.put("pic_id", "");
+			jsonobj.put("place", "1");
+			jsonobj.put("pic", base64Image);
+			new ConnectionTask(getActivity(), jsonobj).execute(Constants.API_PICTURE_UPLOAD);
+		} catch (JSONException ex) {
+			ex.printStackTrace();
+		}
+	}
 
 	public class DownloadBitmap extends AsyncTask<String, Void, Drawable> {
 		Drawable d;
@@ -469,23 +477,6 @@ public class MenuFragment extends Fragment implements FragmentManager.OnBackStac
 			super.onPostExecute(result);
 		}
 
-	}
-
-	public void uploadImage(String profileId, String base64Image) {
-		JSONObject jsonobj;
-		jsonobj = new JSONObject();
-		try {
-			jsonobj.put("appkey", "spiderman1450@gmail.com");
-			jsonobj.put("profile_id", profileId);
-			jsonobj.put("session_token", Constants.SESSION_TOKEN);
-			jsonobj.put("user_id", Constants.USER_ID);
-			jsonobj.put("pic_id", "");
-			jsonobj.put("place", "1");
-			jsonobj.put("pic", base64Image);
-			new ConnectionTask(getActivity(), jsonobj).execute(Constants.API_PICTURE_UPLOAD);
-		} catch (JSONException ex) {
-			ex.printStackTrace();
-		}
 	}
 }
 

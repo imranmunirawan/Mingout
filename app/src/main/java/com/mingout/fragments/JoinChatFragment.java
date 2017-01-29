@@ -1,12 +1,14 @@
 package com.mingout.fragments;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import android.app.Fragment;
+import android.util.Log;
+
 import com.mingout.util.ConnectionTask;
 import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;
-import android.app.Fragment;
-import android.util.Log;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class JoinChatFragment extends Fragment implements ResultJSON {
 
@@ -52,7 +54,7 @@ public class JoinChatFragment extends Fragment implements ResultJSON {
 		Constants.JOIN_CHAT_FLAG = true;
 		getData(Constants.USER_LAT, Constants.USER_LONG);
 	}
-	
+
 	public boolean isJoinChatRunning(){
 		return Constants.JOIN_CHAT_FLAG;
 	}

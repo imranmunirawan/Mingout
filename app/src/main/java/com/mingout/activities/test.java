@@ -1,9 +1,7 @@
 package com.mingout.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
+import android.support.v7.app.AppCompatActivity;
 
 public class test extends AppCompatActivity {
 

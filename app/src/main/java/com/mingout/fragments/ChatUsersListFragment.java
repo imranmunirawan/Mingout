@@ -1,12 +1,5 @@
 package com.mingout.fragments;
 
-import java.util.ArrayList;
-
-import org.jivesoftware.smack.packet.Message;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,6 +23,13 @@ import com.mingout.util.Constants;
 import com.mingout.util.GPSHelper;
 import com.mingout.util.ResultJSON;
 import com.mingout.util.Utilities;
+
+import org.jivesoftware.smack.packet.Message;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class ChatUsersListFragment extends Fragment implements ResultJSON, ChatSearchListner {
 	ListView lv;

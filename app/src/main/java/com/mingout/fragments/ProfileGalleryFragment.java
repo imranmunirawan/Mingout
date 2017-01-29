@@ -2,26 +2,20 @@ package com.mingout.fragments;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mingout.activities.R;
-import com.mingout.fragments.ProfileGalleryBusinessFragment;
-import com.mingout.fragments.ProfileGallerySocialFragment;
 import com.mingout.models.GalleryModel;
-import com.mingout.util.ConnectionTask;
 import com.mingout.util.ConnectionTaskSupportFragment;
 import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;
@@ -139,35 +133,6 @@ public class ProfileGalleryFragment extends Fragment implements
 		//   TV_titleName.setText("Business Photos");
 		TV_socailArrow.setVisibility(TextView.INVISIBLE);
 		TV_businessArrow.setVisibility(TextView.VISIBLE);
-	}
-
-	private class MyPagerAdapter extends FragmentPagerAdapter {
-
-		public MyPagerAdapter(FragmentManager fm) {
-			super(fm);
-		}
-
-		@Override
-		public Fragment getItem(int pos) {
-			switch (pos) {
-
-				case 0:
-
-					return socialFrag;
-
-				case 1:
-
-					return businessFrag;
-
-				default:
-					return socialFrag;
-			}
-		}
-
-		@Override
-		public int getCount() {
-			return 2;
-		}
 	}
 
 	@Override
@@ -297,6 +262,35 @@ public class ProfileGalleryFragment extends Fragment implements
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
+	}
+
+	private class MyPagerAdapter extends FragmentPagerAdapter {
+
+		public MyPagerAdapter(FragmentManager fm) {
+			super(fm);
+		}
+
+		@Override
+		public Fragment getItem(int pos) {
+			switch (pos) {
+
+				case 0:
+
+					return socialFrag;
+
+				case 1:
+
+					return businessFrag;
+
+				default:
+					return socialFrag;
+			}
+		}
+
+		@Override
+		public int getCount() {
+			return 2;
 		}
 	}
 }

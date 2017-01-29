@@ -21,9 +21,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textView1"
+                    android:buttonTint="#ffffff"
                     android:gravity="right|center"
                     android:text="@string/male"
-                    android:buttonTint="#ffffff"
                     android:textColor="#ffffff"
                     android:textSize="16dp"/>
 
@@ -32,23 +32,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textView1"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="#ffffff"
                     android:gravity="right|center"
                     android:text="@string/female"
                     android:textColor="#ffffff"
-                    android:buttonTint="#ffffff"
-                    android:textSize="16dp"
-                    android:layout_marginTop="5dp"/>
+                    android:textSize="16dp" />
                 <RadioButton
                     android:id="@+id/radioButton3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textView1"
-                    android:gravity="right|center"
-                    android:textColor="#ffffff"
+                    android:layout_marginTop="5dp"
                     android:buttonTint="#ffffff"
-                    android:textSize="16dp"
+                    android:gravity="right|center"
                     android:text="Not Looking"
-                    android:layout_marginTop="5dp"/>
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
 
             </RadioGroup>
         </LinearLayout>

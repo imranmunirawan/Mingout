@@ -1,8 +1,5 @@
 package com.mingout.dialog;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Dialog;
 import android.app.Fragment;
 import android.content.Context;
@@ -16,6 +13,9 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 import com.mingout.activities.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GymWorkOutDeviceDialog extends Dialog implements
 		View.OnClickListener {
@@ -93,6 +93,6 @@ public class GymWorkOutDeviceDialog extends Dialog implements
 	}
 
 	public interface BodyPartListner {
-		public void setBodyPart(String bodyPart);
+		void setBodyPart(String bodyPart);
 	}
 }

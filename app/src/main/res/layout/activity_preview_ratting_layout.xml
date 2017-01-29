@@ -47,13 +47,13 @@
             android:layout_height="fill_parent" >
 
             <RatingBar
+                android:id="@+id/ratingBar1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:progressTint="#FDB016"
                 android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
                 android:layout_marginTop="20dp"
-                android:id="@+id/ratingBar1"
-                android:layout_marginBottom="10dp"/>
+                android:progressTint="#FDB016" />
 
             <EditText
                 android:id="@+id/ET_comment1"
@@ -79,8 +79,8 @@
                 android:layout_below="@+id/ET_comment1"
                 android:layout_marginTop="15dp"
                 android:text="Service Quality"
-                android:textSize="15dp"
-                android:textColor="#f95801" />
+                android:textColor="#f95801"
+                android:textSize="15dp" />
 
             <EditText
                 android:id="@+id/ET_comment2"
@@ -103,8 +103,8 @@
                 android:layout_below="@+id/ratingBar1"
                 android:layout_marginLeft="25dp"
                 android:text="Food Quality"
-                android:textSize="14dp"
-                android:textColor="#f95801" />
+                android:textColor="#f95801"
+                android:textSize="14dp" />
 
             <FrameLayout
                 android:id="@+id/frag_container_rattingCommentList"

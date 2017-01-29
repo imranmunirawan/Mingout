@@ -3,7 +3,6 @@ package com.mingout.fragments;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +11,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mingout.activities.MatchesActivity;
-import com.mingout.activities.ProviewActivity;
 import com.mingout.activities.R;
 import com.mingout.activities.ReviewItemDetailActivity;
 import com.mingout.util.Constants;

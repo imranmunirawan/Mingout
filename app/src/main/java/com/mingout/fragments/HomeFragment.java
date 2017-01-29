@@ -10,7 +10,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
-import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -59,20 +58,16 @@ public class HomeFragment extends Fragment implements FragmentManager.OnBackStac
     FragmentTransaction ft;
     NavigationView navigationView;
     DrawerLayout mDrawerLayout;
-
+    boolean logoutFlag = false;
+    Bundle b;
+    Fragment fragment;
+    ActionBarDrawerToggle mDrawerToggle;
+    View drawerView,drawerContent, mainView;
+    Toolbar toolBar;
     private Handler mHandler = new Handler();
     private boolean mShowingBack = false;
     private boolean socialFlipFlag = false;
     private boolean businessFlipFlag = true;
-
-    boolean logoutFlag = false;
-    Bundle b;
-
-    Fragment fragment;
-    ActionBarDrawerToggle mDrawerToggle;
-
-    View drawerView,drawerContent, mainView;
-    Toolbar toolBar;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -342,6 +337,23 @@ public class HomeFragment extends Fragment implements FragmentManager.OnBackStac
   //      }
   //  }
 
+    public void uploadImage(String profileId, String base64Image) {
+        JSONObject jsonobj;
+        jsonobj = new JSONObject();
+        try {
+            jsonobj.put("appkey", "spiderman1450@gmail.com");
+            jsonobj.put("profile_id", profileId);
+            jsonobj.put("session_token", Constants.SESSION_TOKEN);
+            jsonobj.put("user_id", Constants.USER_ID);
+            jsonobj.put("pic_id", "");
+            jsonobj.put("place", "1");
+            jsonobj.put("pic", base64Image);
+            new ConnectionTask(getActivity(), jsonobj).execute(Constants.API_PICTURE_UPLOAD);
+        } catch (JSONException ex) {
+            ex.printStackTrace();
+        }
+    }
+
     public class DownloadBitmap extends AsyncTask<String, Void, Drawable> {
         Drawable d;
 
@@ -360,23 +372,6 @@ public class HomeFragment extends Fragment implements FragmentManager.OnBackStac
             super.onPostExecute(result);
         }
 
-    }
-
-    public void uploadImage(String profileId, String base64Image) {
-        JSONObject jsonobj;
-        jsonobj = new JSONObject();
-        try {
-            jsonobj.put("appkey", "spiderman1450@gmail.com");
-            jsonobj.put("profile_id", profileId);
-            jsonobj.put("session_token", Constants.SESSION_TOKEN);
-            jsonobj.put("user_id", Constants.USER_ID);
-            jsonobj.put("pic_id", "");
-            jsonobj.put("place", "1");
-            jsonobj.put("pic", base64Image);
-            new ConnectionTask(getActivity(), jsonobj).execute(Constants.API_PICTURE_UPLOAD);
-        } catch (JSONException ex) {
-            ex.printStackTrace();
-        }
     }
 
 }

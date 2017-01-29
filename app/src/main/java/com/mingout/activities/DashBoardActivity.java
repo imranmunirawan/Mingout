@@ -1,16 +1,8 @@
 package com.mingout.activities;
 
-import java.io.InputStream;
-import java.io.Serializable;
-import java.net.URL;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -30,9 +22,7 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,15 +30,9 @@ import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 import com.mingout.dialog.ConfirmationDialog;
 import com.mingout.dialog.ConfirmationDialog.ConfirmationDialogListner;
-import com.mingout.dialog.OptionsDialog;
 import com.mingout.fragments.DashboardBusinessFragment;
 import com.mingout.fragments.DashboardSocialFragment;
-import com.mingout.fragments.EditProfileActivity;
-import com.mingout.fragments.HomeFragment;
-import com.mingout.fragments.MenuContactUsActivity;
 import com.mingout.fragments.MenuFragment;
-import com.mingout.fragments.MenuHelpActivity;
-import com.mingout.fragments.ProfileGalleryFragment;
 import com.mingout.models.FacebookDataModel;
 import com.mingout.models.ReviewBusinessDataModel;
 import com.mingout.models.ReviewSocialDataModel;
@@ -58,7 +42,12 @@ import com.mingout.util.ResultJSON;
 import com.mingout.util.Utilities;
 import com.squareup.picasso.Picasso;
 
-import static com.mingout.activities.R.id.drawerLayout;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.InputStream;
+import java.net.URL;
 
 public class DashBoardActivity extends SlidingFragmentActivity implements FragmentManager.OnBackStackChangedListener, ResultJSON, ConfirmationDialogListner {
 	DashboardBusinessFragment businessFrag;
@@ -72,10 +61,6 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 	FragmentTransaction ft;
 	//	NavigationView navigationView;
 	DrawerLayout mDrawerLayout;
-	private Handler mHandler = new Handler();
-	private boolean mShowingBack = false;
-	private boolean socialFlipFlag = false;
-	private boolean businessFlipFlag = true;
 	boolean logoutFlag = false;
 	Bundle b;
 	SlidingMenu sm;
@@ -84,6 +69,11 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 	View drawerView, drawerContent, mainView;
 	Toolbar toolBar;
 	NavigationView navigationView;
+	private Handler mHandler = new Handler();
+	private boolean mShowingBack = false;
+	private boolean socialFlipFlag = false;
+	private boolean businessFlipFlag = true;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -386,10 +376,10 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 			JSONObject jData = new JSONObject(string);
 			Log.e("Response :", string);
 			if (jData.getString("status_code").equals("1")) {
-				JSONObject jResponse = (JSONObject) jData.getJSONObject("response");
+				JSONObject jResponse = jData.getJSONObject("response");
 				if (logoutFlag != true) {
 					try {
-						JSONObject jBusiness = (JSONObject) jResponse.getJSONObject("business_profile");
+						JSONObject jBusiness = jResponse.getJSONObject("business_profile");
 
 						Constants.PROFILE_ID_BUSINESS = jBusiness.getString("profile_id");
 
@@ -419,13 +409,13 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 						businessFrag.setAge(Utilities.getAgeFromDOB(jBusiness.getString("dob")));
 						Constants.BUSINESS_AGE = String.valueOf(Utilities.getAgeFromDOB(jBusiness.getString("dob")));
 						Constants.BUSINESS_DOB = jBusiness.getString("dob");
-						b.putSerializable("business review data", (Serializable) businessModel);
+						b.putSerializable("business review data", businessModel);
 					} catch (Exception e) {
 						Log.e("Business Exception :", e.toString());
 					}
 
 					try {
-						JSONObject jSocial = (JSONObject) jResponse.getJSONObject("social_profile");
+						JSONObject jSocial = jResponse.getJSONObject("social_profile");
 						Constants.PROFILE_ID_SOCIAL = jSocial.getString("profile_id");
 						ReviewSocialDataModel socialModel = new ReviewSocialDataModel();
 						socialModel.setName(jSocial.getString("full_name"));
@@ -458,7 +448,7 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 
 						TV_nameDetail.setText(Constants.USER_NAME + " / " + Constants.SOCIAL_AGE);
 
-						b.putSerializable("socialreview data", (Serializable) socialModel);
+						b.putSerializable("socialreview data", socialModel);
 					} catch (Exception e) {
 						Log.e("Social Exception :", e.toString());
 					}
@@ -511,31 +501,6 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 		}
 	}
 
-	public class DownloadBitmap extends AsyncTask<String, Void, Drawable> {
-		Drawable d;
-
-		protected void onPreExecute() {
-		}
-
-		protected Drawable doInBackground(String... urls) {
-			try {
-				InputStream is = (InputStream) new URL(urls[0]).getContent();
-				d = Drawable.createFromStream(is, "src name");
-			} catch (Exception e1) {
-				e1.printStackTrace();
-			}
-			return d;
-		}
-
-		@Override
-		protected void onPostExecute(Drawable result)
-		{
-
-			super.onPostExecute(result);
-		}
-
-	}
-
 	public void uploadImage(String profileId, String base64Image) {
 		JSONObject jsonobj;
 		jsonobj = new JSONObject();
@@ -553,14 +518,14 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 		}
 	}
 
-//-----------------------------------------------------------------------------------------------------------------------
-
-
 	private void setBehindView() {
 		setBehindContentView(R.layout.menu_slide);
 		transactionFragments(MenuFragment.newInstance(), R.id.menu_slide);
 
 	}
+
+//-----------------------------------------------------------------------------------------------------------------------
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
@@ -581,6 +546,7 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
 	public void transactionFragments(Fragment fragment, int viewResource) {
 		android.support.v4.app.FragmentManager fm = getSupportFragmentManager();
 		android.support.v4.app.FragmentTransaction ft = fm.beginTransaction();
@@ -596,5 +562,29 @@ public class DashBoardActivity extends SlidingFragmentActivity implements Fragme
 	protected void onResume() {
 		super.onResume();
 		setBehindView();
+	}
+
+	public class DownloadBitmap extends AsyncTask<String, Void, Drawable> {
+		Drawable d;
+
+		protected void onPreExecute() {
+		}
+
+		protected Drawable doInBackground(String... urls) {
+			try {
+				InputStream is = (InputStream) new URL(urls[0]).getContent();
+				d = Drawable.createFromStream(is, "src name");
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
+			return d;
+		}
+
+		@Override
+		protected void onPostExecute(Drawable result) {
+
+			super.onPostExecute(result);
+		}
+
 	}
 }

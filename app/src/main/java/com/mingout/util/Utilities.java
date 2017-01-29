@@ -1,17 +1,16 @@
 package com.mingout.util;
 
-import java.io.ByteArrayOutputStream;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.util.Base64;
+
+import java.io.ByteArrayOutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class Utilities {
 
@@ -73,11 +72,7 @@ public class Utilities {
         final android.net.NetworkInfo mobile = connMgr.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
         if (wifi.isConnectedOrConnecting ()) {
             return true;
-        } else if (mobile.isConnectedOrConnecting ()) {
-            return true;
-        } else {
-            return false;
-        }
+        } else return mobile.isConnectedOrConnecting();
     }
 
     public static String getXMPPuid(String sEmail) {

@@ -1,7 +1,5 @@
 package com.mingout.activities;
-import java.io.IOException;
-import org.json.JSONException;
-import org.json.JSONObject;
+
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -22,10 +20,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
+import android.widget.ImageView.ScaleType;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ImageView.ScaleType;
+
 import com.mingout.dialog.GalleryUploadImageDialog;
 import com.mingout.dialog.GalleryUploadImageDialog.onButtonClickListner;
 import com.mingout.models.PreviewBillboardModel;
@@ -34,6 +32,11 @@ import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;
 import com.mingout.util.Utilities;
 import com.squareup.picasso.Picasso;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
 
 public class AddBillboardActivity extends Activity implements ResultJSON,
 		onButtonClickListner {

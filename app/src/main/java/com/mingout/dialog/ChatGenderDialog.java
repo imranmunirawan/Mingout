@@ -1,8 +1,5 @@
 package com.mingout.dialog;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.Fragment;
@@ -18,6 +15,9 @@ import android.widget.Spinner;
 
 import com.mingout.activities.R;
 import com.mingout.util.Constants;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ChatGenderDialog extends Dialog implements
 		View.OnClickListener {
@@ -105,6 +105,6 @@ public class ChatGenderDialog extends Dialog implements
 	}
 
 	public interface GenderListner {
-		public void setGender(String gender);
+		void setGender(String gender);
 	}
 }

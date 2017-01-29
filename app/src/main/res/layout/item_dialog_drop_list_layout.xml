@@ -8,11 +8,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
         android:minHeight="?android:attr/listPreferredItemHeightSmall"
         android:text="Medium Text"
-        android:gravity="center"
         android:textAppearance="?android:attr/textAppearanceListItemSmall"
-        android:textColor="#fff" 
-        android:background="@color/colorPrimary"/>
+        android:textColor="#fff" />
 
 </RelativeLayout>

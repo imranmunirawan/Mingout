@@ -36,7 +36,7 @@ public class EditDataHeightFragment extends Fragment implements
 			"6'6\"", "6'7\"", "6'8\"", "6'9\"", "6'10\"", "6'11\"", "7'0\"",
 			"7'1\"", "7'2\"" };
 
-	int selectedValue, lockFrag = 0;;
+	int selectedValue, lockFrag = 0;
 	String dataString = null;
 //	boolean feetFlag = false;
 
@@ -144,7 +144,7 @@ public class EditDataHeightFragment extends Fragment implements
 			String string = (String) obj;
 			JSONObject jData = new JSONObject(string);
 			if (jData.getString("status_code").equals("1")) {
-				JSONObject jResponse = (JSONObject) jData
+				JSONObject jResponse = jData
 						.getJSONObject("response");
 				Toast.makeText(getActivity(), "Height has been updated!",
 						Toast.LENGTH_SHORT).show();

@@ -1,8 +1,5 @@
 package com.mingout.activities;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -12,19 +9,21 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.View.OnClickListener;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mingout.fragments.PreviewProfileListFragment;
 import com.mingout.fragments.RattingCommentListFragment;
 import com.mingout.util.ConnectionTask;
 import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class PreviewRattingActivity extends Activity implements ResultJSON {
 
@@ -232,7 +231,7 @@ public class PreviewRattingActivity extends Activity implements ResultJSON {
 	}
 
 	public interface UpdateReviewListListner {
-		public void updateReviewList();
+		void updateReviewList();
 	}
 
 }

@@ -11,18 +11,18 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/IV_upperBanner"
         android:layout_margin="15dp"
+        android:background="@drawable/promotions_web_shape"
         android:gravity="center"
-        android:padding="5dp"
-        android:background="@drawable/promotions_web_shape">
+        android:padding="5dp">
 
         <WebView
             android:id="@+id/WV_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="6dp"
+            android:background="@android:color/transparent"
             android:gravity="center"
-            android:scrollbars="none"
-            android:background="@android:color/transparent"/>
+            android:scrollbars="none" />
     </LinearLayout>
 
     <ImageView
@@ -47,8 +47,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/promotions_skip_message"
-            android:textSize="14dp"
-            android:textColor="#eeeeee"/>
+            android:textColor="#eeeeee"
+            android:textSize="14dp" />
 
         <TextView
             android:id="@+id/TV_RemainingTime"
@@ -56,9 +56,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="10"
+            android:textColor="#eeeeee"
             android:textSize="14dp"
-            android:textStyle="bold"
-            android:textColor="#eeeeee"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
     <ImageView

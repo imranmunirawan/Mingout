@@ -60,12 +60,12 @@ public class GalleryDeleteImageDialog extends Dialog implements
 	}
 
 	public interface onDeleteClickListner {
-		public void onDeleteCameraButtonPressed();
+		void onDeleteCameraButtonPressed();
 
-		public void onDeleteGalleryButtonPressed();
-		
-		public void onDeleteButtonPressed();
-		
+		void onDeleteGalleryButtonPressed();
+
+		void onDeleteButtonPressed();
+
 	}
 
 }

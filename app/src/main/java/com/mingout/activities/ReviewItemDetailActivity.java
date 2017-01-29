@@ -1,11 +1,5 @@
 package com.mingout.activities;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -23,6 +17,11 @@ import com.mingout.models.ReviewSocialDataModel;
 import com.mingout.util.ConnectionTask;
 import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class ReviewItemDetailActivity extends Activity implements ResultJSON {
 
@@ -90,11 +89,11 @@ public class ReviewItemDetailActivity extends Activity implements ResultJSON {
 			String string = (String) obj;
 			JSONObject jData = new JSONObject(string);
 
-			JSONObject jResponse = (JSONObject) jData.getJSONObject("response");
+			JSONObject jResponse = jData.getJSONObject("response");
 
 			if (newProfileDetailFlag == 0) {
 				try {
-					JSONObject jBusiness = (JSONObject) jResponse
+					JSONObject jBusiness = jResponse
 							.getJSONObject("business_profile");
 
 					ReviewBusinessDataModel businessModel = new ReviewBusinessDataModel();
@@ -121,7 +120,7 @@ public class ReviewItemDetailActivity extends Activity implements ResultJSON {
 					}
 					businessModel.setImagesUrl(imagesUrls);
 					b.putSerializable("review data",
-							(Serializable) businessModel);
+							businessModel);
 
 				} catch (Exception e) {
 					// TODO: handle exception
@@ -129,7 +128,7 @@ public class ReviewItemDetailActivity extends Activity implements ResultJSON {
 				}
 
 				try {
-					JSONObject jSocial = (JSONObject) jResponse
+					JSONObject jSocial = jResponse
 							.getJSONObject("social_profile");
 
 					ReviewSocialDataModel socialModel = new ReviewSocialDataModel();
@@ -159,7 +158,7 @@ public class ReviewItemDetailActivity extends Activity implements ResultJSON {
 						}
 					}
 					socialModel.setImagesUrls(imagesUrls);
-					s.putSerializable("review data", (Serializable) socialModel);
+					s.putSerializable("review data", socialModel);
 
 				} catch (Exception e) {
 					// TODO: handle exception
@@ -216,7 +215,7 @@ public class ReviewItemDetailActivity extends Activity implements ResultJSON {
 					businessModel.setImagesUrl(imagesUrls);
 
 					b.putSerializable("review data",
-							(Serializable) businessModel);
+							businessModel);
 				} else {
 
 					ReviewSocialDataModel socialModel = new ReviewSocialDataModel();
@@ -253,7 +252,7 @@ public class ReviewItemDetailActivity extends Activity implements ResultJSON {
 					}
 					socialModel.setImagesUrls(imagesUrls);
 
-					s.putSerializable("review data", (Serializable) socialModel);
+					s.putSerializable("review data", socialModel);
 				}
 			}
 

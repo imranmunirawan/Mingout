@@ -1,23 +1,5 @@
 package com.mingout.activities;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-
-import org.jivesoftware.smack.Chat;
-import org.jivesoftware.smack.ChatManagerListener;
-import org.jivesoftware.smack.MessageListener;
-import org.jivesoftware.smack.PacketListener;
-import org.jivesoftware.smack.filter.MessageTypeFilter;
-import org.jivesoftware.smack.filter.PacketFilter;
-import org.jivesoftware.smack.packet.Message;
-import org.jivesoftware.smack.packet.Packet;
-import org.jivesoftware.smackx.MessageEventManager;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -33,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+
 import com.mingout.adapters.ChatAdapter;
 import com.mingout.chatModule.ConnectServer;
 import com.mingout.chatModule.ConnectServer.ConnectedToServer;
@@ -46,6 +29,24 @@ import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;
 import com.mingout.util.Utilities;
 
+import org.jivesoftware.smack.Chat;
+import org.jivesoftware.smack.ChatManagerListener;
+import org.jivesoftware.smack.MessageListener;
+import org.jivesoftware.smack.PacketListener;
+import org.jivesoftware.smack.filter.MessageTypeFilter;
+import org.jivesoftware.smack.filter.PacketFilter;
+import org.jivesoftware.smack.packet.Message;
+import org.jivesoftware.smack.packet.Packet;
+import org.jivesoftware.smackx.MessageEventManager;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+
 public class ChatUserActivity extends Activity implements ReconnectServerListner, ResultJSON, ConnectedToServer {
 
     ListView lv;
@@ -58,16 +59,14 @@ public class ChatUserActivity extends Activity implements ReconnectServerListner
     boolean ringFlag = false;
     int ringFlagCounter = 0;
     Thread thread;
-
-    private Handler mHandler;
-    private PacketListener packetListener;
-
     // ListViewAutoScrollHelper mScrollHelper;
     String secondPUserName;
     ChatRoomUserListModel secondUserData;
     List<ChatModel> localChatList;
     List<ChatRoomUserListModel> onlineUserList;
     boolean typingFlag = true;
+    private Handler mHandler;
+    private PacketListener packetListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

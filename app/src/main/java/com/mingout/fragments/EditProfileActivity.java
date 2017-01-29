@@ -20,11 +20,9 @@ import android.widget.Toast;
 import com.mingout.activities.R;
 import com.mingout.models.ReviewBusinessDataModel;
 import com.mingout.models.ReviewSocialDataModel;
-import com.mingout.util.ConnectionTask;
 import com.mingout.util.ConnectionTaskSupportFragment;
 import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;
-import com.mingout.util.Utilities;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -160,35 +158,6 @@ public class EditProfileActivity extends Fragment implements ResultJSON {
 		TV_businessArrow.setVisibility(TextView.VISIBLE);
 	}
 
-	private class MyPagerAdapter extends FragmentPagerAdapter {
-
-		public MyPagerAdapter(FragmentManager fm) {
-			super(fm);
-		}
-
-		@Override
-		public Fragment getItem(int pos) {
-			switch (pos) {
-
-			case 0:
-
-				return socialFrag;
-
-			case 1:
-
-				return businessFrag;
-
-			default:
-				return socialFrag;
-			}
-		}
-
-		@Override
-		public int getCount() {
-			return 2;
-		}
-	}
-
 	private void getData(boolean waitingFlag) throws JSONException {
 		// TODO Auto-generated method stub
 
@@ -269,6 +238,35 @@ public class EditProfileActivity extends Fragment implements ResultJSON {
 			Toast.makeText(getActivity(), e.toString(), Toast.LENGTH_SHORT).show();
 		}
 
+	}
+
+	private class MyPagerAdapter extends FragmentPagerAdapter {
+
+		public MyPagerAdapter(FragmentManager fm) {
+			super(fm);
+		}
+
+		@Override
+		public Fragment getItem(int pos) {
+			switch (pos) {
+
+				case 0:
+
+					return socialFrag;
+
+				case 1:
+
+					return businessFrag;
+
+				default:
+					return socialFrag;
+			}
+		}
+
+		@Override
+		public int getCount() {
+			return 2;
+		}
 	}
 
 //	@Override

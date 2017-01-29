@@ -1,15 +1,5 @@
 package com.mingout.fragments;
 
-import org.json.JSONObject;
-
-import com.mingout.activities.R;
-import com.mingout.activities.EditBusinessSocialDataActivity.OnSaveButtonPressListner;
-import com.mingout.models.ReviewBusinessDataModel;
-import com.mingout.models.ReviewSocialDataModel;
-import com.mingout.util.Constants;
-import com.mingout.util.ResultJSON;
-import com.mingout.util.UpdateProfileData;
-
 import android.app.Fragment;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -18,6 +8,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.mingout.activities.EditBusinessSocialDataActivity.OnSaveButtonPressListner;
+import com.mingout.activities.R;
+import com.mingout.models.ReviewBusinessDataModel;
+import com.mingout.util.Constants;
+import com.mingout.util.ResultJSON;
+import com.mingout.util.UpdateProfileData;
+
+import org.json.JSONObject;
 
 public class EditDataBiographyFragment extends Fragment implements
 		OnSaveButtonPressListner, ResultJSON {
@@ -65,7 +64,7 @@ public class EditDataBiographyFragment extends Fragment implements
 			String string = (String) obj;
 			JSONObject jData = new JSONObject(string);
 			if (jData.getString("status_code").equals("1")) {
-				JSONObject jResponse = (JSONObject) jData
+				JSONObject jResponse = jData
 						.getJSONObject("response");
 				Toast.makeText(getActivity(), "Biography has been updated!",
 						Toast.LENGTH_SHORT).show();

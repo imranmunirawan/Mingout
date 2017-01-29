@@ -1,9 +1,5 @@
 package com.mingout.activities;
 
-import com.crashlytics.android.Crashlytics;
-import io.fabric.sdk.android.Fabric;
-import org.json.JSONException;
-import org.json.JSONObject;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,18 +9,14 @@ import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.crashlytics.android.Crashlytics;
 import com.facebook.AccessToken;
-import com.facebook.AccessTokenTracker;
-import com.facebook.CallbackManager;
 import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
@@ -35,6 +27,11 @@ import com.mingout.util.ConnectionTask;
 import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;
 import com.mingout.util.Utilities;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import io.fabric.sdk.android.Fabric;
 
 public class SplashActivity extends Activity implements ResultJSON {
 
@@ -165,7 +162,7 @@ public class SplashActivity extends Activity implements ResultJSON {
 			JSONObject jData = new JSONObject(string);
 			if(jData.has("status_code")){
 				if (jData.getString("status_code").equals("1")) {
-					JSONObject jResponse = (JSONObject) jData.getJSONObject("response");
+					JSONObject jResponse = jData.getJSONObject("response");
 
 					Constants.SESSION_TOKEN = jResponse.getString("session_token");
 					Constants.USER_ID = jResponse.getString("user_id");

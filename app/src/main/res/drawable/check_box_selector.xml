@@ -1,4 +1,4 @@
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<selector>
 
     <!-- <item android:drawable="@drawable/right_arrow_h" android:state_checked="true"/> -->
     <!-- <item android:drawable="@drawable/right_arrow_h" android:state_pressed="true"/> -->

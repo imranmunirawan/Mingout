@@ -68,10 +68,10 @@
             android:layout_marginRight="5dp"
             android:layout_marginTop="5dp"
             android:gravity="center"
-            android:visibility="invisible"
             android:src="@drawable/workoutplan_desc"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="#f95801" />
+            android:textColor="#f95801"
+            android:visibility="invisible" />
 
         <TextView
             android:id="@+id/textView33"

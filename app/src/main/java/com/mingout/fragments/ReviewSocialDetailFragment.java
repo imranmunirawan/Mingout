@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.mingout.activities.R;
 import com.mingout.adapters.ReviewViewPagerAdapter;
 import com.mingout.models.ReviewSocialDataModel;

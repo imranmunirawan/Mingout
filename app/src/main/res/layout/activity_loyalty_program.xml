@@ -64,13 +64,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Join our loyalty program today\nBingo"
-                    android:textSize="16dp"
-                    android:textColor="#666666"
                     android:layout_centerVertical="true"
-                    android:layout_toEndOf="@+id/imageView"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_toEndOf="@+id/imageView"
+                    android:text="Join our loyalty program today\nBingo"
+                    android:textColor="#666666"
+                    android:textSize="16dp" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -80,13 +80,13 @@
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@+id/imageView"
                         android:gravity="center"
                         android:text="@string/name"
-                        android:textSize="16dp"
                         android:textColor="#f95801"
-                        android:layout_centerVertical="true"
-                        android:layout_toEndOf="@+id/imageView"
-                        android:layout_marginLeft="10dp"/>
+                        android:textSize="16dp" />
                 </RelativeLayout>
 
                 <EditText
@@ -114,13 +114,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@+id/imageView"
                         android:gravity="center"
                         android:text="ID"
-                        android:textSize="16dp"
                         android:textColor="#f95801"
-                        android:layout_centerVertical="true"
-                        android:layout_toEndOf="@+id/imageView"
-                        android:layout_marginLeft="10dp"/>
+                        android:textSize="16dp" />
                 </RelativeLayout>
 
                 <EditText
@@ -150,13 +150,13 @@
                         android:id="@+id/textView3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@+id/imageView1"
                         android:gravity="center"
                         android:text="@string/email"
-                        android:textSize="16dp"
                         android:textColor="#f95801"
-                        android:layout_centerVertical="true"
-                        android:layout_toEndOf="@+id/imageView1"
-                        android:layout_marginLeft="10dp"/>
+                        android:textSize="16dp" />
                 </RelativeLayout>
 
 
@@ -184,13 +184,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@+id/imageView2"
                         android:gravity="center"
                         android:text="Phone Number"
-                        android:textSize="16dp"
                         android:textColor="#f95801"
-                        android:layout_centerVertical="true"
-                        android:layout_toEndOf="@+id/imageView2"
-                        android:layout_marginLeft="10dp"/>
+                        android:textSize="16dp" />
                 </RelativeLayout>
 
                 <EditText
@@ -214,13 +214,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@+id/imageView3"
                         android:gravity="center"
                         android:text="Date of Birth"
-                        android:textSize="16dp"
                         android:textColor="#f95801"
-                        android:layout_centerVertical="true"
-                        android:layout_toEndOf="@+id/imageView3"
-                        android:layout_marginLeft="10dp"/>
+                        android:textSize="16dp" />
                 </RelativeLayout>
 
                 <EditText
@@ -231,9 +231,9 @@
                     android:background="@drawable/round_white_shape"
                     android:ems="10"
                     android:gravity="center"
+                    android:hint="1999-10-1 (YYYY-MM-DD) e.g"
                     android:imeOptions="actionNext"
                     android:inputType="text"
-                    android:hint="1999-10-1 (YYYY-MM-DD) e.g"
                     android:maxLines="1"
                     android:paddingBottom="7dp"
                     android:paddingTop="7dp"
@@ -249,13 +249,13 @@
                         android:id="@+id/textView6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@+id/imageView4"
                         android:gravity="center"
                         android:text="Street and House Number"
-                        android:textSize="16dp"
                         android:textColor="#f95801"
-                        android:layout_centerVertical="true"
-                        android:layout_toEndOf="@+id/imageView4"
-                        android:layout_marginLeft="10dp"/>
+                        android:textSize="16dp" />
                 </RelativeLayout>
 
                 <EditText
@@ -282,13 +282,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@+id/imageView4"
                         android:gravity="center"
                         android:text="City"
-                        android:textSize="16dp"
                         android:textColor="#f95801"
-                        android:layout_centerVertical="true"
-                        android:layout_toEndOf="@+id/imageView4"
-                        android:layout_marginLeft="10dp"/>
+                        android:textSize="16dp" />
                 </RelativeLayout>
 
                 <EditText
@@ -315,19 +315,20 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@+id/imageView4"
                         android:gravity="center"
                         android:text="Zip"
-                        android:textSize="16dp"
                         android:textColor="#f95801"
-                        android:layout_centerVertical="true"
-                        android:layout_toEndOf="@+id/imageView4"
-                        android:layout_marginLeft="10dp"/>
+                        android:textSize="16dp" />
                 </RelativeLayout>
 
                 <EditText
                     android:id="@+id/ET_zip"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/round_white_shape"
                     android:ems="10"
@@ -338,8 +339,7 @@
                     android:paddingBottom="7dp"
                     android:paddingTop="7dp"
                     android:textColor="#b4bac8"
-                    android:textSize="14dp"
-                    android:layout_marginBottom="30dp"/>
+                    android:textSize="14dp" />
             </LinearLayout>
 
         </LinearLayout>

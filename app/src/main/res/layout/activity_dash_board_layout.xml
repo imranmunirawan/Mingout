@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:id="@+id/content"
-    >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@mipmap/dashboard_bg"
         android:orientation="vertical"
-        android:weightSum="2"
-        android:background="@mipmap/dashboard_bg">
+        android:weightSum="2">
     <LinearLayout
         android:id="@+id/LL_parent"
         android:layout_width="match_parent"
@@ -23,10 +21,10 @@
                     android:id="@+id/toolbar"
                     layout="@layout/toolbar"/>
                 <FrameLayout
-                    android:orientation="vertical"
+                    android:id="@+id/viewPager"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/viewPager"
+                    android:orientation="vertical"
                     />
 
     </LinearLayout>
@@ -35,8 +33,8 @@
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="0.2"
-        android:gravity="center"
         android:background="@drawable/dashboard_footer_bg"
+        android:gravity="center"
         android:weightSum="2" >
 
         <LinearLayout
@@ -56,10 +54,10 @@
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
+                android:fontFamily="sans-serif-light"
                 android:text="@string/Preview"
                 android:textColor="#ffffff"
-                android:textSize="15dp"
-                android:fontFamily="sans-serif-light"/>
+                android:textSize="15dp" />
         </LinearLayout>
 
         <TextView
@@ -84,10 +82,10 @@
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
+                android:fontFamily="sans-serif-light"
                 android:text="@string/photo"
                 android:textColor="#ffffff"
-                android:textSize="15dp"
-                android:fontFamily="sans-serif-light"/>
+                android:textSize="15dp" />
         </LinearLayout>
     </LinearLayout>
     </LinearLayout>

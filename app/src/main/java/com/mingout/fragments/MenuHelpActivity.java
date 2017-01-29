@@ -12,7 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mingout.activities.R;
-import com.mingout.util.ConnectionTask;
 import com.mingout.util.ConnectionTaskSupportFragment;
 import com.mingout.util.Constants;
 import com.mingout.util.ResultJSON;

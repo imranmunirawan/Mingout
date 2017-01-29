@@ -9,11 +9,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-light"
         android:gravity="center"
         android:text="Enter Date of Birth"
         android:textColor="#999999"
-        android:textSize="20dp"
-        android:fontFamily="sans-serif-light" />
+        android:textSize="20dp" />
 
     <DatePicker
         android:id="@+id/datePicker1"

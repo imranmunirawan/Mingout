@@ -1,5 +1,15 @@
 package com.mingout.util;
 
+import android.app.Activity;
+import android.app.Fragment;
+import android.app.ProgressDialog;
+import android.os.AsyncTask;
+import android.widget.Toast;
+
+import com.mingout.models.ProfileModel;
+import com.mingout.models.ReviewBusinessDataModel;
+import com.mingout.models.ReviewSocialDataModel;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -11,14 +21,6 @@ import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.ProgressDialog;
-import android.os.AsyncTask;
-import android.widget.Toast;
-import com.mingout.models.ProfileModel;
-import com.mingout.models.ReviewBusinessDataModel;
-import com.mingout.models.ReviewSocialDataModel;
 
 public class GetProfileData {
 
@@ -66,14 +68,73 @@ public class GetProfileData {
 		}
 	}
 
+	public void UpdateResult(Object obj) {
+		// TODO Auto-generated method stub
+		Constants.PROFILE_DATA = new ProfileModel();
+		try {
+			String string = (String) obj;
+			JSONObject jData = new JSONObject(string);
+			if (jData.getString("status_code").equals("1")) {
+				JSONObject jResponse = jData
+						.getJSONObject("response");
+
+				try {
+					JSONObject jBusiness = jResponse
+							.getJSONObject("business_profile");
+
+					ReviewBusinessDataModel businessModel = new ReviewBusinessDataModel();
+					businessModel.setName(jBusiness.getString("full_name"));
+					businessModel.setMyPhrase(jBusiness.getString("my_phrase"));
+					businessModel.setGender(jBusiness.getString("gender"));
+					businessModel.setAge(jBusiness.getString("age"));
+					businessModel.setJobTitle(jBusiness.getString("job_title"));
+					businessModel.setCompany(jBusiness
+							.getString("current_company"));
+					businessModel.setBiography(jBusiness.getString("bio"));
+
+					Constants.PROFILE_DATA.setBusinessModel(businessModel);
+
+				} catch (Exception e) {
+					// TODO: handle exception
+
+				}
+
+				try {
+					JSONObject jSocial = jResponse
+							.getJSONObject("social_profile");
+
+					ReviewSocialDataModel socialModel = new ReviewSocialDataModel();
+					socialModel.setName(jSocial.getString("full_name"));
+					socialModel.setMyPhrase(jSocial.getString("my_phrase"));
+					socialModel.setGender(jSocial.getString("gender"));
+					socialModel.setStatus(jSocial.getString("martial_status"));
+					socialModel.setAge(jSocial.getString("age"));
+					socialModel.setHeight(jSocial.getString("height"));
+					socialModel.setLookingFor(jSocial.getString("looking_for"));
+					socialModel.setAboutMe(jSocial.getString("about_me"));
+					socialModel
+							.setWantToMeet(jSocial.getString("want_to_meet"));
+
+					Constants.PROFILE_DATA.setSocialModel(socialModel);
+
+				} catch (Exception e) {
+					// TODO: handle exception
+
+				}
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
 	public class ConnectionTask extends AsyncTask<String, String, Object> {
 
-		private Activity context;
-		private ProgressDialog progressDialog;
 		JSONObject obj;
 		Fragment f;
-
 		Boolean waitingDialog = true, fragFlag = false;
+		private Activity context;
+		private ProgressDialog progressDialog;
 
 		public ConnectionTask(Activity context, JSONObject obj) {
 			this.context = context;
@@ -182,66 +243,6 @@ public class GetProfileData {
 
 		}
 
-	}
-
-	public void UpdateResult(Object obj) {
-		// TODO Auto-generated method stub
-		Constants.PROFILE_DATA = new ProfileModel();
-		try {
-			String string = (String) obj;
-			JSONObject jData = new JSONObject(string);
-			if (jData.getString("status_code").equals("1")) {
-				JSONObject jResponse = (JSONObject) jData
-						.getJSONObject("response");
-
-				try {
-					JSONObject jBusiness = (JSONObject) jResponse
-							.getJSONObject("business_profile");
-
-					ReviewBusinessDataModel businessModel = new ReviewBusinessDataModel();
-					businessModel.setName(jBusiness.getString("full_name"));
-					businessModel.setMyPhrase(jBusiness.getString("my_phrase"));
-					businessModel.setGender(jBusiness.getString("gender"));
-					businessModel.setAge(jBusiness.getString("age"));
-					businessModel.setJobTitle(jBusiness.getString("job_title"));
-					businessModel.setCompany(jBusiness
-							.getString("current_company"));
-					businessModel.setBiography(jBusiness.getString("bio"));
-
-					Constants.PROFILE_DATA.setBusinessModel(businessModel);
-
-				} catch (Exception e) {
-					// TODO: handle exception
-
-				}
-
-				try {
-					JSONObject jSocial = (JSONObject) jResponse
-							.getJSONObject("social_profile");
-
-					ReviewSocialDataModel socialModel = new ReviewSocialDataModel();
-					socialModel.setName(jSocial.getString("full_name"));
-					socialModel.setMyPhrase(jSocial.getString("my_phrase"));
-					socialModel.setGender(jSocial.getString("gender"));
-					socialModel.setStatus(jSocial.getString("martial_status"));
-					socialModel.setAge(jSocial.getString("age"));
-					socialModel.setHeight(jSocial.getString("height"));
-					socialModel.setLookingFor(jSocial.getString("looking_for"));
-					socialModel.setAboutMe(jSocial.getString("about_me"));
-					socialModel
-							.setWantToMeet(jSocial.getString("want_to_meet"));
-
-					Constants.PROFILE_DATA.setSocialModel(socialModel);
-
-				} catch (Exception e) {
-					// TODO: handle exception
-
-				}
-			}
-
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
 	}
 
 }
